@@ -30,4 +30,4 @@ The project uses **Firebase Authentication** for secure login and ensures user-s
 - **Backend:** Firebase
 - **Hosting:** Netlify
 
-## 📂 Project Structure (Overview)
+

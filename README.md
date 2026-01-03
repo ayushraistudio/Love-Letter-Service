@@ -1,8 +1,10 @@
+
 # 💌 AR Love Letters – Personalized Letter Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://143-letter.netlify.app)
-A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Built with a focus on user privacy and a modern UI experience.
+
+A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Now featuring **5 unique design themes** and a smart sharing system that preserves your selected style.
 
 🌐 **Live Demo:** [https://143-letter.netlify.app](https://143-letter.netlify.app)
 
@@ -10,37 +12,48 @@ A secure, interactive, and beautifully designed web application that allows auth
 
 ## ✨ Key Features
 
-* **🔐 Secure Authentication:** Implemented Firebase Email/Password authentication. Only verified users can access the letter generation tools.
-* **🛡️ Privacy-Focused:** User sessions are managed securely. No personal letter data is permanently stored on public databases.
-* **⚡ Instant Generation:** Create custom letters in real-time by entering recipient details and custom messages without page reloads.
-* **🎨 Modern & Responsive UI:** A clean, professional interface with elegant typography and smooth transitions.
-* **🌓 Dark/Light Mode:** Built-in theme toggler for comfortable viewing in any lighting condition.
+### 🎨 Multi-Theme Design System
+* **5 Unique Styles:** Choose from **Classic Love** (Pink), **Midnight Romance** (Dark/Gold), **Blue Sky** (Calm), **Vintage** (Old Paper), and **Neon Cyberpunk** (Glowing).
+* **Dynamic Styling:** The entire application (Background, Fonts, Borders) adapts instantly based on the selected theme.
+
+### 🔐 Advanced Authentication & Security
+* **Secure Login/Signup:** Powered by Firebase Authentication.
+* **Password Recovery:** Integrated "Forgot Password" functionality for account recovery.
+* **Strict Creator Mode:** Direct URL access is blocked for creating letters without login.
+* **Public Viewer Mode:** Shared links can be viewed by anyone without logging in.
+
+### 🚀 Smart Sharing & Downloading
+* **Theme-Aware Sharing:** When you share a link, the recipient sees the **exact design** you chose (fonts, colors, and theme).
+* **High-Quality Download:** Download your letter as an image (`.png`) that captures the specific background and style of your chosen theme.
+* **Privacy-Focused:** No personal letter data is permanently stored on a database; data is encoded securely within the shareable link.
 
 ---
 
-## 📸 Screenshots
+## 📸 Application Workflow
 
-A glimpse into the application interface and workflow.
+A glimpse into the new design selection and generation flow.
 
-| **Modern Landing Page** | **User Dashboard & Input** |
+| **1. Design Selection Grid** | **2. User Dashboard & Input** |
 | :---: | :---: |
-| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/dashboard.jpg" alt="Dashboard" width="400"/> |
-| *Elegant homepage with clear CTAs.* | *Secure area to input details.* |
+| <img src="./assets/design-selection.jpg" alt="Design Selection" width="400"/> | <img src="./assets/dashboard.jpg" alt="Dashboard" width="400"/> |
+| *Choose from 5 unique themes.* | *Securely input recipient details.* |
 
-| **Recipient Details Form** | **Final Generated Letter** |
+| **3. Final Generated Letter (Midnight Theme)** | **4. Final Generated Letter (Neon Theme)** |
 | :---: | :---: |
-| <img src="./assets/details-form.jpg" alt="Recipient Form" width="400"/> | <img src="./assets/final-letter.jpg" alt="Generated Letter" width="400"/> |
-| *Easy-to-use input fields.* | *The beautiful final output.* |
+| <img src="./assets/midnight-preview.jpg" alt="Midnight Theme" width="400"/> | <img src="./assets/neon-preview.jpg" alt="Neon Theme" width="400"/> |
+| *Royal Gold & Black style.* | *Futuristic Glowing style.* |
 
-
+*(Note: Please ensure you update your screenshots folder with the new UI images)*
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML5, CSS3 (CSS Variables for theming), Vanilla JavaScript.
-* **Authentication & Backend Services:** Google Firebase Authentication.
-* **Icons & Typography:** Font Awesome, Google Fonts (Montserrat & Playfair Display).
+* **Frontend:** HTML5, CSS3 (Advanced CSS Variables for Theming), Vanilla JavaScript.
+* **Authentication:** Google Firebase Auth (Login, Signup, Reset Password).
+* **Libraries:** * `html2canvas` (For generating downloadable images).
+    * `FontAwesome` (For icons).
+* **Fonts:** Google Fonts (Great Vibes, Playfair Display, Poppins, Cinzel, Orbitron).
 * **Hosting:** Netlify.
 
 ---
@@ -58,14 +71,14 @@ To run this project locally, you need to set up your own Firebase project.
 2.  **Setup Firebase**
     * Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
     * Navigate to **Build > Authentication** and enable the **Email/Password** sign-in method.
-    * Go to Project Settings and copy your Firebase Web App configuration objects (API Keys, etc.).
+    * Go to Project Settings and copy your Firebase Web App configuration objects.
 
 3.  **Configure the App**
-    * Locate your Firebase initialization file (e.g., `firebase.js` or inside your main script).
-    * Replace the existing placeholder config with your actual Firebase project keys.
+    * Locate your Firebase initialization file (e.g., inside `login.js` and `signup.html`).
+    * Replace the placeholder config with your actual Firebase project keys.
 
     ```javascript
-    // Example config structure within your JS file
+    // Example config structure
     const firebaseConfig = {
       apiKey: "YOUR_API_KEY",
       authDomain: "YOUR_PROJECT_ID.firebaseapp.com",

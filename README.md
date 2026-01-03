@@ -1,7 +1,8 @@
 # 💌 AR Love Letters – Personalized Letter Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b4217887-1337-4206-9237-YOUR-NETLIFY-ID/deploy-status)](https://app.netlify.com/sites/143-letter/deploys) A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Built with a focus on user privacy and a modern UI experience.
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://143-letter.netlify.app)
+A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Built with a focus on user privacy and a modern UI experience.
 
 🌐 **Live Demo:** [https://143-letter.netlify.app](https://143-letter.netlify.app)
 

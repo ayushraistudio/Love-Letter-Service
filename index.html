@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AR Love Letters</title>
+  <title>AR Love Letters | Express Your Feelings</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     :root {
       --color-bg: #fdf6f0;
-      --color-text: #333;
+      --color-text: #4a4a4a;
       --color-primary: #ff6f61;
       --color-primary-hover: #e85c50;
-      --color-card: #ffe8e5;
-      --color-footer: #ffe0de;
-      --color-hero: linear-gradient(135deg, #ffe0e0, #ffdede);
-    }
-    [data-theme="dark"] {
-      --color-bg: #1c1c1c;
-      --color-text: #f1f1f1;
-      --color-primary: #ff8a80;
-      --color-primary-hover: #ff5252;
-      --color-card: #2a2a2a;
-      --color-footer: #1f1f1f;
-      --color-hero: linear-gradient(135deg, #333, #444);
+      --color-secondary: #ff9a8b;
+      --color-card: #ffffff;
+      --color-footer: #ffe8e5;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --hero-gradient: linear-gradient(135deg, #fff0f0 0%, #ffdede 100%);
     }
 
-  
+    [data-theme="dark"] {
+      --color-bg: #121212;
+      --color-text: #e0e0e0;
+      --color-primary: #ff8a80;
+      --color-primary-hover: #ff5252;
+      --color-secondary: #333;
+      --color-card: #1e1e1e;
+      --color-footer: #0a0a0a;
+      --shadow: 0 10px 30px rgba(0,0,0,0.3);
+      --hero-gradient: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%);
+    }
 
     * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -34,197 +44,299 @@
       color: var(--color-text);
       line-height: 1.6;
       transition: background 0.3s, color 0.3s;
-      scroll-behavior: smooth;
-      overflow-x:hidden;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--color-text);
     }
 
     /* HEADER */
     .ar-header {
-      display:flex; justify-content:space-between; align-items:center;
-      padding:20px 30px;
-      background:#fff;
-      box-shadow:0 3px 10px rgba(0,0,0,0.1);
-      position: sticky; top:0; z-index:100;
-      transition: background 0.3s, color 0.3s;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 5%;
+      background: var(--color-card);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+      position: sticky; top: 0; z-index: 1000;
     }
-    [data-theme="dark"] .ar-header { background:#222; }
 
-    .ar-logo { font-size:28px; font-weight:700; color:var(--color-primary); }
+    .ar-logo {
+      font-size: 24px; font-weight: 700; color: var(--color-primary);
+      text-decoration: none; display: flex; align-items: center; gap: 10px;
+    }
+
+    nav { display: flex; align-items: center; gap: 20px; }
 
     .ar-nav-link {
-      margin-left:20px; text-decoration:none; color:var(--color-text); font-weight:500;
-      transition: color 0.3s;
+      text-decoration: none; color: var(--color-text); font-weight: 500;
+      font-size: 14px; transition: color 0.3s;
     }
-    .ar-nav-link:hover { color:var(--color-primary); }
+    .ar-nav-link:hover { color: var(--color-primary); }
+
+    .btn-login {
+      border: 2px solid var(--color-primary);
+      padding: 8px 20px; border-radius: 25px;
+      color: var(--color-primary);
+      transition: all 0.3s;
+    }
+    .btn-login:hover { background: var(--color-primary); color: white; }
 
     .ar-theme-toggle {
-      margin-left:20px; cursor:pointer; font-weight:600;
-      background:var(--color-primary); color:#fff; border:none; padding:6px 12px;
-      border-radius:6px; transition: transform 0.2s, background 0.3s;
+      cursor: pointer; background: none; border: none;
+      font-size: 18px; color: var(--color-text);
     }
-    .ar-theme-toggle:hover { transform:scale(1.05); background:var(--color-primary-hover); }
 
-    /* HERO */
+    /* HERO SECTION */
     .ar-hero {
-      text-align:center; padding:90px 20px;
-      background:var(--color-hero);
-      border-bottom-left-radius:50% 10%;
-      border-bottom-right-radius:50% 10%;
-      transition: background 0.3s;
-      opacity:0; transform: translateY(30px); animation: fadeIn 1s forwards 0.2s;
+      min-height: 85vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      background: var(--hero-gradient);
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
     }
-    .ar-hero h1 { font-size:40px; color:var(--color-text); margin-bottom:15px; }
-    .ar-hero p { margin:20px 0; font-size:18px; }
 
-    .ar-btn {
-      display:inline-block; margin-top:25px; padding:14px 30px;
-      background:var(--color-primary); color:white; text-decoration:none;
-      border-radius:10px; font-weight:500;
-      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    .ar-hero h1 {
+      font-size: 3.5rem; margin-bottom: 20px;
+      line-height: 1.2;
+      animation: fadeInUp 0.8s ease-out;
     }
-    .ar-btn:hover {
-      background:var(--color-primary-hover); transform:scale(1.05);
-      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    
+    .ar-hero h1 span { color: var(--color-primary); }
+
+    .ar-hero p {
+      font-size: 1.2rem; max-width: 600px; margin-bottom: 40px;
+      opacity: 0.9; animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .cta-group {
+      display: flex; gap: 15px;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    }
+
+    .ar-btn-primary {
+      padding: 15px 40px; background: var(--color-primary); color: white;
+      text-decoration: none; border-radius: 50px; font-weight: 600;
+      box-shadow: 0 10px 20px rgba(255, 111, 97, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .ar-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 111, 97, 0.4); }
+
+    .ar-btn-secondary {
+      padding: 15px 40px; background: transparent; color: var(--color-text);
+      border: 2px solid var(--color-text);
+      text-decoration: none; border-radius: 50px; font-weight: 600;
+      transition: all 0.3s;
+    }
+    .ar-btn-secondary:hover { background: var(--color-text); color: var(--color-bg); }
+
+    /* HOW IT WORKS */
+    .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
+    
+    .ar-steps {
+      padding: 80px 5%;
+      background: var(--color-bg);
+    }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px; text-align: center;
+    }
+    .step-card {
+      padding: 20px;
+    }
+    .step-icon {
+      font-size: 40px; color: var(--color-primary); margin-bottom: 20px;
+      height: 80px; width: 80px; line-height: 80px;
+      background: var(--color-card); border-radius: 50%;
+      box-shadow: var(--shadow); margin-left: auto; margin-right: auto;
     }
 
     /* FEATURES */
     .ar-features {
-      display:flex; flex-wrap:wrap; justify-content:center; padding:60px 20px;
-      background:var(--color-bg); transition: background 0.3s;
+      padding: 80px 5%;
+      background: var(--color-card);
     }
-    .ar-feature-box {
-      width:300px; margin:20px; padding:30px; background:var(--color-card);
-      border-radius:15px; text-align:center;
-      box-shadow:0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-      opacity:0; transform: translateY(20px); animation: fadeIn 0.8s forwards;
+    .features-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
-    .ar-feature-box:nth-child(1) { animation-delay:0.3s; }
-    .ar-feature-box:nth-child(2) { animation-delay:0.5s; }
-    .ar-feature-box:nth-child(3) { animation-delay:0.7s; }
-    .ar-feature-box:hover {
-      transform: translateY(-7px); box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    .feature-box {
+      background: var(--color-bg); padding: 40px; border-radius: 20px;
+      transition: transform 0.3s;
+      border: 1px solid rgba(0,0,0,0.05);
     }
+    .feature-box:hover { transform: translateY(-10px); box-shadow: var(--shadow); }
+    .feature-box h3 { margin-bottom: 15px; font-size: 1.5rem; }
+    .feature-box i { color: var(--color-primary); font-size: 24px; margin-bottom: 15px; }
+
+    /* DEVELOPER SECTION */
+    .ar-dev {
+      padding: 60px 20px; text-align: center;
+      background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+      color: white;
+    }
+    .ar-dev h2 { color: white; margin-bottom: 15px; }
+    .ar-dev a {
+      display: inline-block; margin-top: 20px;
+      padding: 10px 30px; background: white; color: var(--color-primary);
+      text-decoration: none; border-radius: 30px; font-weight: bold;
+      transition: transform 0.3s;
+    }
+    .ar-dev a:hover { transform: scale(1.05); }
 
     /* FOOTER */
     .ar-footer {
-      text-align:center; padding:30px 20px; background:var(--color-footer);
-      margin-top:40px; font-size:16px; transition: background 0.3s;
-      opacity:0; transform: translateY(20px); animation: fadeIn 1s forwards 1s;
+      background: var(--color-footer); padding: 50px 5% 20px;
+      margin-top: 0;
+    }
+    .footer-content {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;
+      margin-bottom: 40px; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 40px;
+    }
+    .footer-brand h4 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 15px; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { text-decoration: none; color: var(--color-text); opacity: 0.8; transition: opacity 0.3s; }
+    .footer-links a:hover { opacity: 1; color: var(--color-primary); }
+    
+    .copyright { text-align: center; opacity: 0.6; font-size: 14px; }
+
+    /* ANIMATIONS */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
-
-    /* ✅ RESPONSIVE DESIGN */
-    @media (max-width: 900px) {
-      .ar-header {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px 20px;
-        text-align: center;
-      }
-
-      .ar-logo {
-        font-size: 24px;
-      }
-
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .ar-nav-link {
-        margin: 0;
-        font-size: 15px;
-      }
-
-      .ar-theme-toggle {
-        margin: 0;
-        font-size: 15px;
-        padding: 6px 10px;
-      }
-
-      .ar-hero {
-        padding: 60px 15px;
-      }
-
-      .ar-hero h1 {
-        font-size: 28px;
-      }
-
-      .ar-hero p {
-        font-size: 16px;
-      }
-
-      .ar-btn {
-        padding: 12px 20px;
-        font-size: 15px;
-      }
-
-      .ar-feature-box {
-        width: 90%;
-        margin: 15px 0;
-        padding: 20px;
-      }
-
-      .ar-footer {
-        font-size: 14px;
-        padding: 25px 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .ar-hero h1 { font-size: 24px; }
-      .ar-hero p { font-size: 15px; }
-      .ar-btn { font-size: 14px; }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .ar-hero h1 { font-size: 2.5rem; }
+      .cta-group { flex-direction: column; width: 100%; }
+      .ar-btn-primary, .ar-btn-secondary { width: 100%; }
+      .ar-header { flex-direction: column; gap: 15px; }
+      nav { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
 <body>
+
   <header class="ar-header">
-    <div class="ar-logo">AR Love Letters</div>
+    <a href="#" class="ar-logo">
+      <i class="fa-solid fa-envelope-open-text"></i> AR Love Letters
+    </a>
     <nav>
-      <a href="https://ayush-letter.netlify.app/login.html" class="ar-nav-link">Login</a>
-      <a href="https://ayush-letter.netlify.app/signup.html" class="ar-nav-link">Sign Up</a>
-      <button class="ar-theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+      <a href="#features" class="ar-nav-link">Features</a>
+      <a href="#how-it-works" class="ar-nav-link">How it Works</a>
+      <button class="ar-theme-toggle" onclick="toggleTheme()">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="https://ayush-letter.netlify.app/login.html" class="ar-nav-link btn-login">Login</a>
     </nav>
   </header>
 
   <section class="ar-hero">
-    <h1>Create Heartfelt Love Letters</h1>
-    <p>Personalize letters effortlessly and make them truly yours.</p>
-    <a href="https://in.linkedin.com/in/ayushraistudio" class="ar-btn">Visit My Profile</a>
+    <h1>Write Feelings,<br> <span>Create Memories.</span></h1>
+    <p>The most secure and beautiful way to express your love. Generate personalized letters instantly with our AI-powered tool.</p>
+    <div class="cta-group">
+      <a href="https://ayush-letter.netlify.app/signup.html" class="ar-btn-primary">Create a Letter</a>
+      <a href="#how-it-works" class="ar-btn-secondary">Learn More</a>
+    </div>
   </section>
 
-  <section class="ar-features">
-    <div class="ar-feature-box">
-      <h3>AI-Powered</h3>
-      <p>Generate meaningful letters instantly.</p>
+  <section id="how-it-works" class="ar-steps">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon"><i class="fa-solid fa-user-plus"></i></div>
+        <h3>1. Sign Up</h3>
+        <p>Create a secure account using Firebase authentication to keep your letters private.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><i class="fa-solid fa-pen-fancy"></i></div>
+        <h3>2. Customize</h3>
+        <p>Enter your special someone's details and choose a theme for your letter.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
+        <h3>3. Share Love</h3>
+        <p>Generate a beautiful letter instantly and share it with your loved one.</p>
+      </div>
     </div>
-    <div class="ar-feature-box">
-      <h3>Secure & Private</h3>
-      <p>Your words are never saved and completely private.</p>
+  </section>
+
+  <section id="features" class="ar-features">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <div class="features-grid">
+      <div class="feature-box">
+        <i class="fa-solid fa-lock"></i>
+        <h3>Secure & Private</h3>
+        <p>Your feelings are personal. We use session-based security so only you can access your data.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3>AI Powered</h3>
+        <p>Struggling with words? Let our system help you draft the perfect emotional message.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Fully Responsive</h3>
+        <p>Create letters on the go. Works perfectly on mobile, tablet, and desktop.</p>
+      </div>
     </div>
-    <div class="ar-feature-box">
-      <h3>Customizable</h3>
-      <p>Edit letters with your own touch and style.</p>
-    </div>
+  </section>
+
+  <section class="ar-dev">
+    <h2>Built with ❤️ by Ayush Rai</h2>
+    <p>Connect with me for collaborations or web development projects.</p>
+    <a href="https://in.linkedin.com/in/ayushraistudio" target="_blank">
+      <i class="fa-brands fa-linkedin"></i> Visit My Profile
+    </a>
   </section>
 
   <footer class="ar-footer">
-    <p>Log in to access your personalized letters. Visit my LinkedIn profile for account details.</p>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h4>AR Love Letters</h4>
+        <p>Making expression easy.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://ayush-letter.netlify.app/login.html">Login</a></li>
+          <li><a href="https://ayush-letter.netlify.app/signup.html">Sign Up</a></li>
+          <li><a href="https://github.com/ayushraistudio/Love-Letter-Service">GitHub Repo</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@ayushraistudio.com">Email Support</a></li>
+          <li><a href="https://in.linkedin.com/in/ayushraistudio">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 AR Love Letters. All rights reserved. Designed by Ayush Rai.
+    </div>
   </footer>
 
   <script>
     function toggleTheme(){
-      if(document.documentElement.getAttribute('data-theme')==='dark'){
-        document.documentElement.removeAttribute('data-theme');
-      }else{
-        document.documentElement.setAttribute('data-theme','dark');
+      const html = document.documentElement;
+      const icon = document.querySelector('.ar-theme-toggle i');
+      
+      if(html.getAttribute('data-theme') === 'dark'){
+        html.removeAttribute('data-theme');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
       }
     }
   </script>
 </body>
 </html>
+

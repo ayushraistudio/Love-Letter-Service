@@ -24,12 +24,12 @@ A glimpse into the application interface and workflow.
 
 | **Modern Landing Page** | **User Dashboard & Input** |
 | :---: | :---: |
-| <img src="./assets/landing.png" alt="Landing Page" width="400"/> | <img src="./assets/dashboard.png" alt="Dashboard" width="400"/> |
+| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/dashboard.jpg" alt="Dashboard" width="400"/> |
 | *Elegant homepage with clear CTAs.* | *Secure area to input details.* |
 
 | **Recipient Details Form** | **Final Generated Letter** |
 | :---: | :---: |
-| <img src="./assets/details-form.png" alt="Recipient Form" width="400"/> | <img src="./assets/final-letter.png" alt="Generated Letter" width="400"/> |
+| <img src="./assets/details-form.jpg" alt="Recipient Form" width="400"/> | <img src="./assets/final-letter.jpg" alt="Generated Letter" width="400"/> |
 | *Easy-to-use input fields.* | *The beautiful final output.* |
 
 

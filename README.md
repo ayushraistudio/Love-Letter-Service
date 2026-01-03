@@ -5,7 +5,7 @@
 
 A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Now featuring **5 unique design themes** and a smart sharing system that preserves your selected style.
 
-🌐 **Live Demo:** [https://143-letter.netlify.app](https://143-letter.netlify.app)
+🌐 **Live Demo:** [https://143-letter.netlify.app](https://love-letter-service.netlify.app)
 
 ---
 

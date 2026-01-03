@@ -153,7 +153,7 @@
       box-shadow: var(--shadow); margin-left: auto; margin-right: auto;
     }
 
-    /* --- NEW DESIGN SELECTION GRID --- */
+    /* --- NEW DESIGN SELECTION GRID STYLES --- */
     .design-section {
       padding: 80px 5%;
       text-align: center;
@@ -168,7 +168,7 @@
       margin-top: 40px;
     }
 
-    /* DESIGN CARD STYLES */
+    /* DESIGN CARD */
     .design-card {
       background: var(--color-card);
       border-radius: 15px;
@@ -210,6 +210,7 @@
       font-weight: bold; cursor: pointer; transition: 0.3s;
     }
     .select-btn:hover { background: var(--color-primary-hover); transform: scale(1.05); }
+
 
     /* FEATURES */
     .ar-features {
@@ -284,13 +285,13 @@
       <i class="fa-solid fa-envelope-open-text"></i> AR Love Letters
     </a>
     <nav>
-      <a href="#features" class="ar-nav-link">Features</a>
+      <a href="#design-section" class="ar-nav-link">Designs</a>
       <a href="#how-it-works" class="ar-nav-link">How it Works</a>
       <button class="ar-theme-toggle" onclick="toggleTheme()">
         <i class="fa-solid fa-moon"></i>
       </button>
       
-      <a href="login.html" id="authLink" class="ar-nav-link btn-login">Login</a>
+      <a href="https://ayush-letter.netlify.app/login.html" class="ar-nav-link btn-login">Login</a>
     </nav>
   </header>
 
@@ -298,7 +299,7 @@
     <h1>Write Feelings,<br> <span>Create Memories.</span></h1>
     <p>The most secure and beautiful way to express your love. Generate personalized letters instantly with our AI-powered tool.</p>
     <div class="cta-group">
-      <a href="#design-section" class="ar-btn-primary">Get Started</a>
+      <a href="#design-section" class="ar-btn-primary">Create a Letter</a>
       <a href="#how-it-works" class="ar-btn-secondary">Learn More</a>
     </div>
   </section>
@@ -405,8 +406,8 @@
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="https://ayush-letter.netlify.app/login.html">Login</a></li>
+          <li><a href="https://ayush-letter.netlify.app/signup.html">Sign Up</a></li>
           <li><a href="https://github.com/ayushraistudio/Love-Letter-Service">GitHub Repo</a></li>
         </ul>
       </div>
@@ -424,50 +425,29 @@
   </footer>
 
   <script>
-    // Theme Toggle Logic
     function toggleTheme(){
       const html = document.documentElement;
       const icon = document.querySelector('.ar-theme-toggle i');
       
       if(html.getAttribute('data-theme') === 'dark'){
         html.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
       } else {
         html.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
       }
     }
 
-    // Load saved theme
-    if(localStorage.getItem('theme') === 'dark'){
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.querySelector('.ar-theme-toggle i').classList.replace('fa-moon', 'fa-sun');
-    }
-
-    // Check Login State for Header Button
-    const authLink = document.getElementById('authLink');
-    if(sessionStorage.getItem('loggedIn')) {
-        authLink.textContent = "Dashboard"; // Ya "Logout" jo bhi chaho
-        authLink.href = "recipient.html"; // Logged in hai to direct form pe bhejo
-    }
-
-    // ✅ DESIGN SELECTION LOGIC
+    // ✅ DESIGN SELECTION REDIRECT LOGIC
     function selectDesign(styleName) {
-        // 1. Save Design Preference
+        // Save design preference locally (just in case they come back)
         localStorage.setItem("selectedDesign", styleName);
         
-        // 2. Check Auth
-        if(sessionStorage.getItem('loggedIn')) {
-            // Agar Login hai -> Recipient Page
-            window.location.href = "recipient.html";
-        } else {
-            // Agar Login nahi hai -> Login Page (Redirect wapas recipient pe hoga login ke baad)
-            window.location.href = "login.html";
-        }
+        // Redirect to the MAIN APP LOGIN
+        // This connects landing page to your main app
+        window.location.href = "https://ayush-letter.netlify.app/login.html";
     }
   </script>
 </body>

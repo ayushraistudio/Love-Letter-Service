@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700&family=Great+Vibes&family=Poppins:wght@300;600&family=Cinzel:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -153,6 +153,64 @@
       box-shadow: var(--shadow); margin-left: auto; margin-right: auto;
     }
 
+    /* --- NEW DESIGN SELECTION GRID --- */
+    .design-section {
+      padding: 80px 5%;
+      text-align: center;
+      background: var(--color-bg);
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    /* DESIGN CARD STYLES */
+    .design-card {
+      background: var(--color-card);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid transparent;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .design-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      border-color: var(--color-primary);
+    }
+
+    /* MINI PREVIEW BOXES */
+    .preview-box {
+      width: 100%; height: 120px;
+      border-radius: 10px;
+      display: flex; justify-content: center; align-items: center;
+      margin-bottom: 15px;
+      font-size: 20px; font-weight: bold;
+    }
+
+    /* 🎨 Styles Preview */
+    .style-classic .preview-box { background: #fdf6f0; border: 2px dashed #ff6f61; color: #ff6f61; font-family: 'Great Vibes', cursive; }
+    .style-midnight .preview-box { background: #1a1a1a; border: 2px solid #ffd700; color: #ffd700; font-family: 'Great Vibes', cursive; }
+    .style-blue .preview-box { background: #e0f7fa; border: 2px dotted #0288d1; color: #0288d1; font-family: 'Poppins', sans-serif; }
+    .style-vintage .preview-box { background: #f4e4bc; border: 2px double #5c4033; color: #5c4033; font-family: 'Cinzel', serif; }
+    .style-neon .preview-box { background: #000; border: 2px solid #0ff; color: #f0f; font-family: 'Orbitron', sans-serif; box-shadow: 0 0 8px #0ff; }
+
+    .design-card h3 { font-size: 18px; margin-bottom: 5px; color: var(--color-text); font-family: 'Playfair Display', serif; }
+    .design-card p { font-size: 13px; margin-bottom: 15px; opacity: 0.8; font-style: italic; color: var(--color-text); font-family: 'Montserrat', sans-serif; }
+
+    .select-btn {
+      padding: 10px 20px; width: 100%;
+      background: var(--color-primary); color: white;
+      border: none; border-radius: 50px;
+      font-weight: bold; cursor: pointer; transition: 0.3s;
+    }
+    .select-btn:hover { background: var(--color-primary-hover); transform: scale(1.05); }
+
     /* FEATURES */
     .ar-features {
       padding: 80px 5%;
@@ -231,7 +289,8 @@
       <button class="ar-theme-toggle" onclick="toggleTheme()">
         <i class="fa-solid fa-moon"></i>
       </button>
-      <a href="https://ayush-letter.netlify.app/login.html" class="ar-nav-link btn-login">Login</a>
+      
+      <a href="login.html" id="authLink" class="ar-nav-link btn-login">Login</a>
     </nav>
   </header>
 
@@ -239,7 +298,7 @@
     <h1>Write Feelings,<br> <span>Create Memories.</span></h1>
     <p>The most secure and beautiful way to express your love. Generate personalized letters instantly with our AI-powered tool.</p>
     <div class="cta-group">
-      <a href="https://ayush-letter.netlify.app/signup.html" class="ar-btn-primary">Create a Letter</a>
+      <a href="#design-section" class="ar-btn-primary">Get Started</a>
       <a href="#how-it-works" class="ar-btn-secondary">Learn More</a>
     </div>
   </section>
@@ -248,20 +307,63 @@
     <h2 class="section-title">How It Works</h2>
     <div class="steps-grid">
       <div class="step-card">
-        <div class="step-icon"><i class="fa-solid fa-user-plus"></i></div>
-        <h3>1. Sign Up</h3>
-        <p>Create a secure account using Firebase authentication to keep your letters private.</p>
+        <div class="step-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>1. Select Design</h3>
+        <p>Choose a theme that matches your feelings (Classic, Midnight, etc.).</p>
       </div>
       <div class="step-card">
         <div class="step-icon"><i class="fa-solid fa-pen-fancy"></i></div>
         <h3>2. Customize</h3>
-        <p>Enter your special someone's details and choose a theme for your letter.</p>
+        <p>Login and enter your special someone's details.</p>
       </div>
       <div class="step-card">
         <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
         <h3>3. Share Love</h3>
-        <p>Generate a beautiful letter instantly and share it with your loved one.</p>
+        <p>Generate a beautiful link instantly and share it with your loved one.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="design-section" class="design-section">
+    <h2 class="section-title">Choose Your Letter Style</h2>
+    
+    <div class="grid-container">
+      
+      <div class="design-card style-classic">
+        <div class="preview-box">Classic</div>
+        <h3>The Original</h3>
+        <p>Romantic Pink & Red Theme</p>
+        <button class="select-btn" onclick="selectDesign('classic')">Select Design</button>
+      </div>
+
+      <div class="design-card style-midnight">
+        <div class="preview-box">Midnight</div>
+        <h3>Royal Gold</h3>
+        <p>Elegant Dark & Gold Theme</p>
+        <button class="select-btn" onclick="selectDesign('midnight')">Select Design</button>
+      </div>
+
+      <div class="design-card style-blue">
+        <div class="preview-box">Cloud 9</div>
+        <h3>Blue Sky</h3>
+        <p>Calm & Peaceful Blue Theme</p>
+        <button class="select-btn" onclick="selectDesign('blue')">Select Design</button>
+      </div>
+
+      <div class="design-card style-vintage">
+        <div class="preview-box">Vintage</div>
+        <h3>Timeless</h3>
+        <p>Old Paper & Ink Style</p>
+        <button class="select-btn" onclick="selectDesign('vintage')">Select Design</button>
+      </div>
+
+      <div class="design-card style-neon">
+        <div class="preview-box">CYBER</div>
+        <h3>Neon Pulse</h3>
+        <p>Futuristic Glowing Theme</p>
+        <button class="select-btn" onclick="selectDesign('neon')">Select Design</button>
+      </div>
+
     </div>
   </section>
 
@@ -303,15 +405,15 @@
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="https://ayush-letter.netlify.app/login.html">Login</a></li>
-          <li><a href="https://ayush-letter.netlify.app/signup.html">Sign Up</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
           <li><a href="https://github.com/ayushraistudio/Love-Letter-Service">GitHub Repo</a></li>
         </ul>
       </div>
       <div class="footer-links">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:info@ayushraistudio.com">Email Support</a></li>
+          <li><a href="mailto:contact@ayushraistudio.com">Email Support</a></li>
           <li><a href="https://in.linkedin.com/in/ayushraistudio">LinkedIn</a></li>
         </ul>
       </div>
@@ -322,19 +424,50 @@
   </footer>
 
   <script>
+    // Theme Toggle Logic
     function toggleTheme(){
       const html = document.documentElement;
       const icon = document.querySelector('.ar-theme-toggle i');
       
       if(html.getAttribute('data-theme') === 'dark'){
         html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
       } else {
         html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
       }
+    }
+
+    // Load saved theme
+    if(localStorage.getItem('theme') === 'dark'){
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.querySelector('.ar-theme-toggle i').classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Check Login State for Header Button
+    const authLink = document.getElementById('authLink');
+    if(sessionStorage.getItem('loggedIn')) {
+        authLink.textContent = "Dashboard"; // Ya "Logout" jo bhi chaho
+        authLink.href = "recipient.html"; // Logged in hai to direct form pe bhejo
+    }
+
+    // ✅ DESIGN SELECTION LOGIC
+    function selectDesign(styleName) {
+        // 1. Save Design Preference
+        localStorage.setItem("selectedDesign", styleName);
+        
+        // 2. Check Auth
+        if(sessionStorage.getItem('loggedIn')) {
+            // Agar Login hai -> Recipient Page
+            window.location.href = "recipient.html";
+        } else {
+            // Agar Login nahi hai -> Login Page (Redirect wapas recipient pe hoga login ke baad)
+            window.location.href = "login.html";
+        }
     }
   </script>
 </body>

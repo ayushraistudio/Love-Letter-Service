@@ -1,4 +1,3 @@
-
 # 💌 AR Love Letters – Personalized Letter Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -29,21 +28,19 @@ A secure, interactive, and beautifully designed web application that allows auth
 
 ---
 
-## 📸 Application Workflow
+## 📸 Screenshots
 
-A glimpse into the new design selection and generation flow.
+A glimpse into the application interface and workflow.
 
-| **1. Design Selection Grid** | **2. User Dashboard & Input** |
+| **Modern Landing Page** | **User Dashboard & Input** |
 | :---: | :---: |
-| <img src="./assets/design-selection.jpg" alt="Design Selection" width="400"/> | <img src="./assets/dashboard.jpg" alt="Dashboard" width="400"/> |
-| *Choose from 5 unique themes.* | *Securely input recipient details.* |
+| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/dashboard.jpg" alt="Dashboard" width="400"/> |
+| *Elegant homepage with design selection.* | *Secure area to input details.* |
 
-| **3. Final Generated Letter (Midnight Theme)** | **4. Final Generated Letter (Neon Theme)** |
+| **Recipient Details Form** | **Final Generated Letter** |
 | :---: | :---: |
-| <img src="./assets/midnight-preview.jpg" alt="Midnight Theme" width="400"/> | <img src="./assets/neon-preview.jpg" alt="Neon Theme" width="400"/> |
-| *Royal Gold & Black style.* | *Futuristic Glowing style.* |
-
-*(Note: Please ensure you update your screenshots folder with the new UI images)*
+| <img src="./assets/details-form.jpg" alt="Recipient Form" width="400"/> | <img src="./assets/final-letter.jpg" alt="Generated Letter" width="400"/> |
+| *Easy-to-use input fields.* | *The beautiful final output.* |
 
 ---
 
@@ -109,3 +106,4 @@ Distributed under the MIT License. See the `LICENSE` file for more information.
 
 ---
 Made with ❤️ and code.
+

@@ -34,13 +34,13 @@ A glimpse into the application interface and workflow.
 
 | **Modern Landing Page** | **User Dashboard & Input** |
 | :---: | :---: |
-| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/dashboard.jpg" alt="Dashboard" width="400"/> |
+| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/_dashboard.jpg" alt="Dashboard" width="400"/> |
 | *Elegant homepage with design selection.* | *Secure area to input details.* |
 
 | **Recipient Details Form** | **Final Generated Letter** |
 | :---: | :---: |
-| <img src="./assets/details-form.jpg" alt="Recipient Form" width="400"/> | <img src="./assets/final-letter.jpg" alt="Generated Letter" width="400"/> |
-| *Easy-to-use input fields.* | *The beautiful final output.* |
+| <img src="./assets/details-form.jpg" alt="Recipient Form" width="400"/> | <img src="./assets/letter.jpg" alt="Generated Letter" width="400"/> |
+| *Easy-to-use input fields.* | *final output.* |
 
 ---
 

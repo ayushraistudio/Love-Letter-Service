@@ -4,7 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="k44crcKHRnH2iELiDZzF6sQPVd27rMv2rFE65ptiqiM" />
-  <title>AR Love Letters | Express Your Feelings</title>
+  
+  <title>AI Love Letter Generator – Free Romantic Letter Maker Online</title>
+  
+  <meta name="description" content="Create beautiful and romantic love letters instantly with our free AI Love Letter Generator. Choose a design, personalize your message, and share it online." />
+  
+  <link rel="canonical" href="https://love-letter-service.netlify.app/" />
+  
+  <meta property="og:title" content="AI Love Letter Generator – Free Romantic Letter Maker Online" />
+  <meta property="og:description" content="Create beautiful and romantic love letters instantly with our free AI Love Letter Generator. Choose a design, personalize your message, and share it online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://love-letter-service.netlify.app/" />
+  <meta property="og:image" content="https://love-letter-service.netlify.app/preview.png" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +64,6 @@
       color: var(--color-text);
     }
 
-    /* HEADER */
     .ar-header {
       display: flex; justify-content: space-between; align-items: center;
       padding: 15px 5%;
@@ -88,7 +98,6 @@
       font-size: 18px; color: var(--color-text);
     }
 
-    /* HERO SECTION */
     .ar-hero {
       min-height: 85vh;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -133,7 +142,6 @@
     }
     .ar-btn-secondary:hover { background: var(--color-text); color: var(--color-bg); }
 
-    /* HOW IT WORKS */
     .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
     
     .ar-steps {
@@ -154,7 +162,6 @@
       box-shadow: var(--shadow); margin-left: auto; margin-right: auto;
     }
 
-    /* --- NEW DESIGN SELECTION GRID STYLES --- */
     .design-section {
       padding: 80px 5%;
       text-align: center;
@@ -169,7 +176,6 @@
       margin-top: 40px;
     }
 
-    /* DESIGN CARD */
     .design-card {
       background: var(--color-card);
       border-radius: 15px;
@@ -185,7 +191,6 @@
       border-color: var(--color-primary);
     }
 
-    /* MINI PREVIEW BOXES */
     .preview-box {
       width: 100%; height: 120px;
       border-radius: 10px;
@@ -194,7 +199,6 @@
       font-size: 20px; font-weight: bold;
     }
 
-    /* 🎨 Styles Preview */
     .style-classic .preview-box { background: #fdf6f0; border: 2px dashed #ff6f61; color: #ff6f61; font-family: 'Great Vibes', cursive; }
     .style-midnight .preview-box { background: #1a1a1a; border: 2px solid #ffd700; color: #ffd700; font-family: 'Great Vibes', cursive; }
     .style-blue .preview-box { background: #e0f7fa; border: 2px dotted #0288d1; color: #0288d1; font-family: 'Poppins', sans-serif; }
@@ -212,8 +216,6 @@
     }
     .select-btn:hover { background: var(--color-primary-hover); transform: scale(1.05); }
 
-
-    /* FEATURES */
     .ar-features {
       padding: 80px 5%;
       background: var(--color-card);
@@ -231,7 +233,6 @@
     .feature-box h3 { margin-bottom: 15px; font-size: 1.5rem; }
     .feature-box i { color: var(--color-primary); font-size: 24px; margin-bottom: 15px; }
 
-    /* DEVELOPER SECTION */
     .ar-dev {
       padding: 60px 20px; text-align: center;
       background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
@@ -246,7 +247,6 @@
     }
     .ar-dev a:hover { transform: scale(1.05); }
 
-    /* FOOTER */
     .ar-footer {
       background: var(--color-footer); padding: 50px 5% 20px;
       margin-top: 0;
@@ -263,13 +263,11 @@
     
     .copyright { text-align: center; opacity: 0.6; font-size: 14px; }
 
-    /* ANIMATIONS */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .ar-hero h1 { font-size: 2.5rem; }
       .cta-group { flex-direction: column; width: 100%; }
@@ -297,7 +295,7 @@
   </header>
 
   <section class="ar-hero">
-    <h1>Write Feelings,<br> <span>Create Memories.</span></h1>
+    <h1>Free AI Love Letter Generator<br><span>Create Beautiful Memories</span></h1>
     <p>The most secure and beautiful way to express your love. Generate personalized letters instantly with our AI-powered tool.</p>
     <div class="cta-group">
       <a href="#design-section" class="ar-btn-primary">Create a Letter</a>
@@ -441,16 +439,10 @@
       }
     }
 
-    // ✅ DESIGN SELECTION REDIRECT LOGIC
     function selectDesign(styleName) {
-        // Save design preference locally (just in case they come back)
         localStorage.setItem("selectedDesign", styleName);
-        
-        // Redirect to the MAIN APP LOGIN
-        // This connects landing page to your main app
         window.location.href = "https://ayush-letter.netlify.app/login.html";
     }
   </script>
 </body>
 </html>
-

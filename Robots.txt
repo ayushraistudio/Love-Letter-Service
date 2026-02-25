@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://love-letter-service.netlify.app/sitemap.xml
+

@@ -205,7 +205,7 @@
       background: var(--color-bg);
     }
     .steps-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 40px; text-align: center;
     }
     .step-card { padding: 20px; }
@@ -258,6 +258,10 @@
     .style-blue .preview-box { background: #e0f7fa; border: 2px dotted #0288d1; color: #0288d1; font-family: 'Poppins', sans-serif; }
     .style-vintage .preview-box { background: #f4e4bc; border: 2px double #5c4033; color: #5c4033; font-family: 'Cinzel', serif; }
     .style-neon .preview-box { background: #000; border: 2px solid #0ff; color: #f0f; font-family: 'Orbitron', sans-serif; box-shadow: 0 0 8px #0ff; }
+    
+    /* ✨ NEW: AI Magic Preview Box Styles */
+    .style-ai .preview-box { background: #f3e8ff; border: 2px solid #8a2be2; color: #8a2be2; font-family: 'Poppins', sans-serif; }
+    [data-theme="dark"] .style-ai .preview-box { background: #1a1a1a; border-color: #b366ff; color: #b366ff; }
 
     .design-card h3 { font-size: 18px; margin-bottom: 5px; color: var(--color-text); font-family: 'Playfair Display', serif; }
     .design-card p { font-size: 13px; margin-bottom: 15px; opacity: 0.8; font-style: italic; color: var(--color-text); font-family: 'Montserrat', sans-serif; }
@@ -269,6 +273,10 @@
       font-weight: bold; cursor: pointer; transition: 0.3s;
     }
     .select-btn:hover { background: var(--color-primary-hover); transform: scale(1.05); }
+
+    /* ✨ NEW: AI Specific Button Color */
+    .btn-ai { background: #8a2be2; }
+    .btn-ai:hover { background: #7a1fd1; }
 
     .ar-features {
       padding: 80px 5%;
@@ -437,6 +445,11 @@
         <h3>3. Share Love</h3>
         <p>Generate a beautiful link instantly and share it with your loved one.</p>
       </div>
+      <div class="step-card">
+        <div class="step-icon"><i class="fa-solid fa-download"></i></div>
+        <h3>4. Download Letter</h3>
+        <p>Save your beautiful letter as an image to keep it forever.</p>
+      </div>
     </div>
   </section>
 
@@ -478,6 +491,13 @@
         <h3>Neon Pulse</h3>
         <p>Futuristic Glowing Theme</p>
         <button class="select-btn" onclick="selectDesign('neon')">Select Design</button>
+      </div>
+
+      <div class="design-card style-ai" style="border-color: #8a2be2;">
+        <div class="preview-box">✨ AI Magic</div>
+        <h3>AI Magic Letter</h3>
+        <p>Fully Customized AI Romance</p>
+        <button class="select-btn btn-ai" onclick="selectDesign('ai')">Use AI Magic</button>
       </div>
 
     </div>

@@ -49,7 +49,7 @@ A glimpse into the application interface and workflow.
 
 | **Recipient Details Form** | **Final Generated Letter** |
 | :---: | :---: |
-| <img src="./assets/details-form.jpg" alt="Recipient Form" width="400"/> | <img src="./assets/Letter.jpg" alt="Generated Letter" width="400"/> |
+| <img src="./assets/image.png" alt="Recipient Form" width="400"/> | <img src="./assets/Letter.jpg" alt="Generated Letter" width="400"/> |
 | *Easy-to-use input fields.* | *final output.* |
 
 ---

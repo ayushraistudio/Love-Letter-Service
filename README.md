@@ -3,31 +3,41 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://143-letter.netlify.app)
 
-A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Now featuring **5 unique design themes** and a smart sharing system that preserves your selected style.
+A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Now featuring 5 handcrafted design themes and an AI Canvas generator that can automatically create a beautifully written love letter based on your input.
 
-🌐 **Live Demo:** [https://love-letter-service.netlify.app](https://love-letter-service.netlify.app)
-
----
-
-## ✨ Key Features
-
-### 🎨 Multi-Theme Design System
-* **5 Unique Styles:** Choose from **Classic Love** (Pink), **Midnight Romance** (Dark/Gold), **Blue Sky** (Calm), **Vintage** (Old Paper), and **Neon Cyberpunk** (Glowing).
-* **Dynamic Styling:** The entire application (Background, Fonts, Borders) adapts instantly based on the selected theme.
-
-### 🔐 Advanced Authentication & Security
-* **Secure Login/Signup:** Powered by Firebase Authentication.
-* **Password Recovery:** Integrated "Forgot Password" functionality for account recovery.
-* **Strict Creator Mode:** Direct URL access is blocked for creating letters without login.
-* **Public Viewer Mode:** Shared links can be viewed by anyone without logging in.
-
-### 🚀 Smart Sharing & Downloading
-* **Theme-Aware Sharing:** When you share a link, the recipient sees the **exact design** you chose (fonts, colors, and theme).
-* **High-Quality Download:** Download your letter as an image (`.png`) that captures the specific background and style of your chosen theme.
-* **Privacy-Focused:** No personal letter data is permanently stored on a database; data is encoded securely within the shareable link.
+🌐 Live Demo: https://love-letter-service.netlify.app
 
 ---
 
+✨ Key Features
+
+🎨 Multi-Theme Design System
+
+* 5 Unique Styles: Choose from Classic Love (Pink), Midnight Romance (Dark/Gold), Blue Sky (Calm), Vintage (Old Paper), and Neon Cyberpunk (Glowing).
+* Dynamic Styling: The entire application (Background, Fonts, Borders) adapts instantly based on the selected theme.
+* Custom Message Support: Users can write and personalize their own love letter message.
+
+🤖 AI Canvas Generator
+
+* Automatic Love Letter Creation: Users provide a few simple inputs, and the AI generates a complete romantic letter automatically.
+* AI-Styled Canvas: The generated message is displayed in a beautifully styled canvas design.
+* Creative Writing Assistance: Helps users create more expressive and emotional messages without writing everything manually.
+
+🔐 Advanced Authentication & Security
+
+* Secure Login/Signup: Powered by Firebase Authentication.
+* Password Recovery: Integrated "Forgot Password" functionality for account recovery.
+* Strict Creator Mode: Direct URL access is blocked for creating letters without login.
+* Public Viewer Mode: Shared links can be viewed by anyone without logging in.
+
+🚀 Smart Sharing & Downloading
+
+* Theme-Aware Sharing: When you share a link, the recipient sees the exact design you chose (fonts, colors, and theme).
+* High-Quality Download: Download your letter as an image (".png") that captures the specific background and style of your chosen theme.
+* Privacy-Focused: No personal letter data is permanently stored on a database; data is encoded securely within the shareable link.
+
+---
+  
 ## 📸 Screenshots
 
 A glimpse into the application interface and workflow.

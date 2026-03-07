@@ -44,7 +44,7 @@ A glimpse into the application interface and workflow.
 
 | **Modern Landing Page** | **User Dashboard & Input** |
 | :---: | :---: |
-| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/_dashboard.jpg" alt="Dashboard" width="400"/> |
+| <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/_dashboard.png" alt="Dashboard" width="400"/> |
 | *Elegant homepage with design selection.* | *Secure area to input details.* |
 
 | **Recipient Details Form** | **Final Generated Letter** |

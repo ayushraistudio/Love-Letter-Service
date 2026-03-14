@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | AR Love Letters</title>
+  
+   
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    (function() {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <style>
+    :root { --color-bg: #fdf6f0; --color-text: #333; --color-primary: #ff6f61; --color-primary-hover: #e85c50; --color-card: #fff; }
+    [data-theme="dark"] { --color-bg: #1c1c1c; --color-text: #f1f1f1; --color-primary: #ff8a80; --color-primary-hover: #ff5252; --color-card: #2a2a2a; }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: var(--color-bg); 
+      color: var(--color-text); 
+      min-height: 100vh; 
+      display: flex; 
+      flex-direction: column;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 5%; background: var(--color-card);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      position: sticky; top: 0; z-index: 1000;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    header .logo { 
+      font-size: 24px; font-weight: 700; color: var(--color-primary); 
+      text-decoration: none; display: flex; align-items: center; gap: 10px;
+    }
+
+    .error-container {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .error-code {
+      font-size: 120px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--color-primary);
+      line-height: 1;
+      text-shadow: 4px 4px 0px rgba(255, 111, 97, 0.2);
+      margin-bottom: 10px;
+    }
+
+    .error-icon {
+      font-size: 60px;
+      color: var(--color-text);
+      opacity: 0.5;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .error-title {
+      font-size: 28px;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 15px;
+    }
+
+    .error-desc {
+      font-size: 16px;
+      opacity: 0.8;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .btn-home {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--color-primary);
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 111, 97, 0.3);
+    }
+
+    .btn-home:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 111, 97, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+
+    footer { text-align: center; padding: 20px; font-size: 14px; opacity: 0.7; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-envelope-open-text"></i> AR Love Letters
+    </a>
+  </header>
+
+  <div class="error-container">
+    <div class="error-icon"><i class="fa-regular fa-paper-plane"></i></div>
+    <div class="error-code">404</div>
+    <h2 class="error-title">Lost in the Mail!</h2>
+    <p class="error-desc">Oops! Even true love couldn't find this page. The magic letter or page you are looking for doesn't exist or might have been moved.</p>
+    <a href="index.html" class="btn-home"><i class="fa-solid fa-house" style="margin-right: 8px;"></i> Take Me Home</a>
+  </div>
+
+  <footer>
+    &copy; 2026 AR Love Letters. All rights reserved.
+  </footer>
+
+</body>
+</html>

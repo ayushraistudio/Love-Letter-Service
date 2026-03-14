@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service - AR Love Letters</title>
+  <title>Terms of Service & Operational Constraints - AR Love Letters</title>
 
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    (function() {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 
   <style>
     :root { --color-bg: #fdf6f0; --color-text: #333; --color-primary: #ff6f61; --color-card: #fff; }
@@ -19,6 +28,7 @@
       background: var(--color-bg); 
       color: var(--color-text); 
       line-height: 1.8; 
+      transition: background 0.3s, color 0.3s;
     }
 
     header {
@@ -40,18 +50,28 @@
     }
 
     .legal-container {
-      max-width: 900px; margin: 50px auto; padding: 40px;
-      background: var(--color-card); border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      max-width: 1000px; margin: 50px auto; padding: 50px;
+      background: var(--color-card); border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       text-align: justify;
     }
 
-    .legal-container h1 { font-size: 32px; margin-bottom: 10px; font-family: 'Montserrat', sans-serif; color: var(--color-primary); text-align: left; }
-    .legal-container .effective-date { font-size: 14px; opacity: 0.6; margin-bottom: 30px; display: block; }
-    .legal-container h2 { font-size: 20px; margin-top: 30px; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; }
-    .legal-container p { margin-bottom: 20px; font-size: 15px; opacity: 0.85; }
+    .legal-container h1 { font-size: 34px; margin-bottom: 10px; font-family: 'Montserrat', sans-serif; color: var(--color-primary); text-align: left; line-height: 1.3;}
+    .legal-container .effective-date { font-size: 14px; opacity: 0.6; margin-bottom: 40px; display: block; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;}
+    .legal-container h2 { font-size: 22px; margin-top: 40px; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; border-bottom: 2px solid rgba(0,0,0,0.05); padding-bottom: 10px; color: var(--color-primary);}
+    .legal-container p, .legal-container ul { margin-bottom: 20px; font-size: 15px; opacity: 0.85; line-height: 1.9; }
+    .legal-container ul { padding-left: 30px; }
+    .legal-container li { margin-bottom: 10px; }
+    .legal-container a { color: var(--color-primary); text-decoration: none; font-weight: 600; }
+    .legal-container a:hover { text-decoration: underline; }
 
     footer { text-align: center; padding: 30px; font-size: 14px; opacity: 0.7; margin-top: 20px; }
+
+    @media (max-width: 768px) {
+        .legal-container { padding: 30px 20px; margin: 20px auto; width: 95%; }
+        .legal-container h1 { font-size: 26px; }
+        .legal-container h2 { font-size: 18px; }
+    }
   </style>
 </head>
 <body>
@@ -66,28 +86,54 @@
   </header>
 
   <div class="legal-container">
-    <h1>Terms of Service</h1>
-    <span class="effective-date">Last Updated: March 2026</span>
+    <h1>Terms of Service & Operational Constraints</h1>
+    <span class="effective-date">Last Updated: March 2026 | Document Control Number: TOS-AR-V2-8842-REV-C</span>
 
-    <h2>1. Acceptance of Terms and Digital Engagement</h2>
-    <p>By initiating access, navigating, or executing any computational operations within the AR Love Letters digital ecosystem, you unequivocally stipulate your adherence to and binding agreement with these generalized Terms of Service. This agreement constitutes a legally enforceable contract governing your interaction with our algorithmic generation frameworks, client-side rendering engines, and associated cryptographic URL protocols. If you harbor any dissent regarding the stipulations, provisions, or overarching governance paradigms codified herein, you are strictly mandated to cease all programmatic and manual interactions with our web infrastructure immediately and comprehensively.</p>
+    <h2>1. Unconditional Acceptance of Contractual Terms</h2>
+    <p>By initiating access, navigating, registering an account, or executing any programmatic or manual computational operations within the AR Love Letters digital ecosystem, you unequivocally stipulate your adherence to and binding agreement with these exhaustive Terms of Service. This agreement constitutes a legally enforceable contract governing your interaction with our algorithmic generation frameworks, client-side rendering engines, Artificial Intelligence (AI) integration nodes, and associated routing protocols.</p>
 
-    <h2>2. Permissible User Conduct and Content Governance</h2>
-    <p>Our infrastructure is provisioned exclusively for the synthesis and transmission of consensual, communicative digital artifacts of an affectionate nature. You explicitly agree that your utilization of our user interfaces, input fields, and URL generation pathways shall not encompass the dissemination, creation, or promulgation of substantive material that could be categorized as defamatory, harassing, explicitly malicious, unlawful, or inherently destructive to the operational integrity of the platform. The administration retains the unilateral and unassailable right to computationally filter, reject, or permanently obfuscate any generated payloads that are algorithmically or manually determined to violate these foundational community communication standards, without prerequisite notification or justification.</p>
+    <h2>2. Permissible User Conduct and Algorithmic Governance</h2>
+    <p>Our infrastructure is provisioned exclusively for the synthesis and transmission of consensual, communicative digital artifacts of a positive and affectionate nature. You explicitly agree that your utilization of our user interfaces, input fields, dashboard capabilities, and URL generation pathways shall not encompass the dissemination, creation, or promulgation of substantive material that falls under restricted categories (defamatory, malicious, sexually explicit, harassing, or inherently unlawful content).</p>
+    <p>The administration retains the unilateral right to computationally filter, reject, suspend, or permanently obliterate any generated payloads or user accounts that are determined to violate these foundational community communication standards, without prerequisite notification or avenues for appeal.</p>
 
-    <h2>3. Intellectual Property and Architectural Ownership</h2>
-    <p>The underlying source code, cascading style sheets, programmatic DOM manipulation scripts, graphical vectors, and overall aesthetic topological structure of the AR Love Letters platform remain the exclusive and undisputed intellectual property of the administrative entity. While users retain the expressive rights to the localized input strings they generate and inject into the application logic, the distributive mechanisms, compiled application bundles, and thematic rendering templates are rigorously protected under international copyright and intellectual property statutes. Unauthorized scraping, reverse-engineering, or commercial redeployment of our operational assets is strictly prohibited.</p>
+    <h2>3. Data Retention Realities: Content vs. Metadata</h2>
+    <p>It is fundamentally required that you understand our dual-mode data architecture and the distinction between private content and system metadata:</p>
+    <ul>
+        <li><strong>Unhosted Links (`?data=`):</strong> When you generate a non-authenticated share link, the Platform completely encrypts the private text and embeds it directly into the URL itself. We do not save a copy of your private letter content to our persistent database. You explicitly agree that AR Love Letters bears absolute zero liability for the loss or corruption of these specific URLs. <em>Note: While the private message is not stored, non-identifiable telemetry metadata (such as the country of origin, selected visual design template, and sender alias) is logged strictly for analytical and anti-abuse purposes.</em></li>
+        <li><strong>Hosted Dashboard Letters (`?id=`):</strong> If you register an account and generate AI letters or explicitly save content, we store both the metadata and the private content in our cloud database to enable your Dashboard history. While we utilize industry-standard security measures, you acknowledge that no digital transmission or cloud storage system can be guaranteed to be 100% secure.</li>
+    </ul>
 
-    <h2>4. Limitation of Liability and Service As-Is Acknowledgment</h2>
-    <p>The digital services rendered by AR Love Letters are instantiated and provided on a strictly "as-is" and "as-available" architectural basis. The administration expressly disclaims all warranties, whether explicit or implicitly constructed, regarding the perpetual uptime, cryptographic invulnerability, or continuous accessibility of the generated artifacts. Under no prevailing legal theory or jurisdictional circumstance shall the developers, administrators, or associated hosting providers be held legally or financially liable for any direct, indirect, incidental, or consequential damages resulting from ephemeral data loss, server timeouts, URL degradation, or the interception of unencrypted payloads over public network topographies.</p>
+    <h2>4. Artificial Intelligence (AI) Utilization and Fair Use</h2>
+    <p>AR Love Letters provisions access to advanced natural language processing APIs ("AI Magic Letters") exclusively to authenticated users. To ensure equitable distribution of computational resources, the Platform strictly enforces algorithmic utilization quotas (e.g., a standardized daily limit of AI generations per user profile).</p>
+    <p>You explicitly agree to utilize these AI functionalities in strict accordance with these predefined parameters. Any attempt to systematically circumvent, bypass, or digitally manipulate these hard-coded limits will result in the immediate and permanent termination of your access privileges.</p>
 
-    <h2>5. Inquiries and Administrative Communications</h2>
-    <p>Should any ambiguities, structural inquiries, or technical disputes arise concerning the execution of these Terms of Service or the underlying mechanics of our data routing protocols, users are provisioned to establish formal contact via our designated administrative communication channel. All inquiries should be directed explicitly to our core operational mailbox at info@ayushraistudio.com, where they will be subjected to internal administrative review protocols.</p>
+    <h2>5. Intellectual Property Rights</h2>
+    <p>The underlying source code, programmatic Document Object Model (DOM) manipulation scripts, graphical vectors, AI integration middleware, and overall aesthetic structure of the AR Love Letters platform remain the exclusive intellectual property of the administrative entity. While users maintain the expressive rights to the localized plaintext strings they voluntarily generate, unauthorized scraping, digital cloning, reverse-engineering, or commercial redeployment of our operational assets is strictly prohibited.</p>
+
+    <h2>6. Account Sovereignty and Deletion Protocols</h2>
+    <p>You retain ultimate authority over your hosted data. You may delete individual letters via your Dashboard at any time. If you wish to terminate your relationship with the Platform entirely, you may submit a formal Account Deletion request via the Support Desk. Upon processing, AR Love Letters will execute a protocol to permanently purge your identity and associated data from our active databases.</p>
+
+    <h2>7. Disclaimer of Warranties ("AS-IS" Clause) and Limitation of Liability</h2>
+    <p>The digital services, AI generation nodes, and data hosting mechanisms rendered by AR Love Letters are provided on a strictly "AS-IS" and "AS-AVAILABLE" basis. <strong>We expressly disclaim all warranties, whether explicit or implied. We do not guarantee perpetual uptime, 100% cryptographic invulnerability against bad actors, algorithmic accuracy of the AI, or continuous accessibility of your saved letters.</strong></p>
+    <p>Under no prevailing legal theory shall the developers, administrators, or associated third-party hosting providers be held legally, contractually, or financially liable for any direct, indirect, incidental, or consequential damages. This explicit limitation of liability covers: ephemeral data loss, server downtimes, unauthorized third-party breaches, or emotional distress arising from intercepted communications.</p>
+
+    <h2>8. Governing Law and Jurisdiction</h2>
+    <p>The Platform is operated and maintained from India. These Terms of Service and your use of the Platform are governed by the laws of India. Any legal disputes, claims, or controversies arising out of or relating to these Terms shall be subject to the exclusive jurisdiction of the competent courts located in New Delhi, India.</p>
+
+    <h2>9. Inquiries and Administrative Communication</h2>
+    <p>Should any ambiguities, structural inquiries, or technical disputes arise concerning the execution of these Terms of Service or data routing protocols, users are provisioned to establish formal contact via our designated administrative communication channels.</p>
+
+    <p><strong>Formal Legal & Support Inquiries:</strong> 
+        <a href="https://ayush-letter.netlify.app/support.html" style="color: var(--color-primary); font-weight: 600;">
+            Open Support Ticket 
+            <i class="fa-solid fa-headset" style="font-size: 14px; margin-left: 5px;"></i>
+        </a>
+    </p>
 
   </div>
 
   <footer>
-    &copy; 2026 AR Love Letters. All rights reserved.
+    &copy; 2026 AR Love Letters. All rights reserved. | Operations & Legal Infrastructure
   </footer>
 
 </body>

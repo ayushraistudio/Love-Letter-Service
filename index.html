@@ -8,6 +8,7 @@
   
   <title>AI Love Letter Generator – Free Romantic Letter Maker Online</title>
   
+  <meta name="keywords" content="ar love letters, ai love letter, love letter by ayush rai, love letter generator, romantic letter maker, free ai letters, online letter creator, free love letter, love-letter-service">
   <meta name="description" content="Create beautiful and romantic love letters instantly with our free AI Love Letter Generator. Choose a design, personalize your message, and share it online." />
   
   <link rel="canonical" href="https://love-letter-service.netlify.app/" />
@@ -20,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Love Letter Generator – Free Romantic Letter Maker Online">
   <meta name="twitter:description" content="Create beautiful and romantic love letters instantly with our free AI Love Letter Generator.">
-   <meta name="twitter:image" content="https://love-letter-service.netlify.app/preview.png">
+  <meta name="twitter:image" content="https://love-letter-service.netlify.app/preview.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,28 +39,42 @@
       "name": "Is this AI Love Letter Generator free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, our AI Love Letter Generator is completely free to use. You can create, personalize, and share beautiful romantic letters without any cost."
+        "text": "Yes! Our Standard Letter Generator is completely free and unlimited for everyone. The advanced AI Magic Letter feature is available for free to our registered users with daily limits."
       }
     },{
       "@type": "Question",
-      "name": "Can I personalize my love letter?",
+      "name": "What is the difference between a Guest and a Logged-in user?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! You can customize your message, choose from multiple beautiful themes, and generate a unique link to send to your special someone."
+        "text": "Guests can create unlimited standard letters, but the data is not saved. Logged-in users get a personal Dashboard to manage/delete their letters, access to the AI Magic Generator, and their receivers get a premium 'Save as Image' button."
+      }
+    },{
+      "@type": "Question",
+      "name": "Why isn't the 'Save Image' button visible to the person I sent the link to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you create a letter as a Guest (without logging in), the 'Save Image' option is only available to you, the creator. The receiver will not see this option. To unlock the 'Save Image' button for your receiver, please Login and generate the letter from your account."
+      }
+    },{
+      "@type": "Question",
+      "name": "Why is my link so long, and why is WhatsApp/Instagram breaking it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you use the free Guest mode, we don't save your data on our servers. Instead, your entire message is encrypted directly into the URL itself (data parameter). Because of this, the link becomes very long, and some apps like WhatsApp or Instagram might break it. Solution: You can shorten the link using a URL shortener, or for the best experience, simply Login! Logged-in users get beautiful, short Premium Links that never break."
       }
     },{
       "@type": "Question",
       "name": "Is my data secure and private?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, your privacy is our top priority. All user authentication is securely handled by Firebase. Furthermore, your generated love letters are never stored on our servers; the message data is encrypted and passed directly through the secure URL you share."
+        "text": "Absolutely. We use a dual-security model. If you use the app as a Guest, we use a Zero-Storage Architecture—your letter is encrypted into the URL itself and never stored in our database. If you Login, your letters are securely saved to your private Dashboard, and you can permanently delete them from our database at any time."
       }
     },{
       "@type": "Question",
-      "name": "Does the receiver need an account to read the letter?",
+      "name": "How does the AI Magic Letter work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, the receiver does not need an account. They can simply click the unique link you share with them to read your beautifully designed letter instantly."
+        "text": "The AI Magic feature asks for relationship type, occasion, tone, and your custom memories. It then writes a deeply emotional letter in multiple languages and automatically generates unique design colors based on the vibe."
       }
     }]
   }
@@ -99,6 +114,7 @@
       line-height: 1.6;
       transition: background 0.3s, color 0.3s;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
     h1, h2, h3 {
@@ -128,17 +144,20 @@
     .ar-nav-link:hover { color: var(--color-primary); }
 
     .btn-login {
-      border: 2px solid var(--color-primary);
-      padding: 8px 20px; border-radius: 25px;
-      color: var(--color-primary);
+      background: var(--color-primary);
+      padding: 8px 22px; border-radius: 25px;
+      color: white; font-weight: 600;
+      box-shadow: 0 4px 10px rgba(255, 111, 97, 0.2);
       transition: all 0.3s;
     }
-    .btn-login:hover { background: var(--color-primary); color: white; }
+    .btn-login:hover { background: var(--color-primary-hover); transform: translateY(-2px); color: white; }
 
     .ar-theme-toggle {
       cursor: pointer; background: none; border: none;
       font-size: 18px; color: var(--color-text);
+      transition: color 0.3s;
     }
+    .ar-theme-toggle:hover { color: var(--color-primary); }
 
     .ar-hero {
       min-height: 85vh;
@@ -186,7 +205,6 @@
 
     .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
     
-    /* 🔥 SEO Content Block Styles */
     .seo-section {
       padding: 80px 5%;
       background: var(--color-card);
@@ -197,8 +215,10 @@
       margin: 0 auto;
     }
     .seo-container h2 { margin-bottom: 20px; font-size: 2rem; color: var(--color-primary); }
-    .seo-container h3 { margin-top: 30px; margin-bottom: 15px; font-size: 1.5rem; }
+    .seo-container h3 { margin-top: 35px; margin-bottom: 15px; font-size: 1.5rem; }
     .seo-container p { margin-bottom: 20px; font-size: 1.05rem; opacity: 0.9; }
+    .seo-container ul { margin-left: 20px; margin-bottom: 20px; font-size: 1.05rem; opacity: 0.9; }
+    .seo-container li { margin-bottom: 10px; }
 
     .ar-steps {
       padding: 80px 5%;
@@ -259,7 +279,6 @@
     .style-vintage .preview-box { background: #f4e4bc; border: 2px double #5c4033; color: #5c4033; font-family: 'Cinzel', serif; }
     .style-neon .preview-box { background: #000; border: 2px solid #0ff; color: #f0f; font-family: 'Orbitron', sans-serif; box-shadow: 0 0 8px #0ff; }
     
-    /* ✨ NEW: AI Magic Preview Box Styles */
     .style-ai .preview-box { background: #f3e8ff; border: 2px solid #8a2be2; color: #8a2be2; font-family: 'Poppins', sans-serif; }
     [data-theme="dark"] .style-ai .preview-box { background: #1a1a1a; border-color: #b366ff; color: #b366ff; }
 
@@ -274,7 +293,6 @@
     }
     .select-btn:hover { background: var(--color-primary-hover); transform: scale(1.05); }
 
-    /* ✨ NEW: AI Specific Button Color */
     .btn-ai { background: #8a2be2; }
     .btn-ai:hover { background: #7a1fd1; }
 
@@ -296,7 +314,6 @@
     .feature-box h3 { margin-bottom: 15px; font-size: 1.5rem; }
     .feature-box i { color: var(--color-primary); font-size: 24px; margin-bottom: 15px; }
 
-    /* 🔥 FAQ Section Styles */
     .faq-section {
       padding: 80px 5%;
       background: var(--color-card);
@@ -395,17 +412,17 @@
     <nav>
       <a href="#design-section" class="ar-nav-link">Designs</a>
       <a href="#how-it-works" class="ar-nav-link">How it Works</a>
-      <button class="ar-theme-toggle" onclick="toggleTheme()">
+      <button class="ar-theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
         <i class="fa-solid fa-moon"></i>
       </button>
       
-      <a href="https://ayush-letter.netlify.app/login.html" class="ar-nav-link btn-login">Login</a>
+      <a href="https://ayush-letter.netlify.app/" class="ar-nav-link btn-login">Go to App <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
     </nav>
   </header>
 
   <section class="ar-hero">
     <h1>Free AI Love Letter Generator<br><span>Create Beautiful Memories</span></h1>
-    <p>The most secure and beautiful way to express your love. Generate personalized letters instantly with our AI-powered tool.</p>
+    <p>The most secure and beautiful way to express your love. Generate personalized letters instantly with our custom designs or let AI write it for you.</p>
     <div class="cta-group">
       <a href="#design-section" class="ar-btn-primary">Create a Letter</a>
       <a href="#how-it-works" class="ar-btn-secondary">Learn More</a>
@@ -414,17 +431,22 @@
 
   <section class="seo-section">
     <div class="seo-container">
-      <h2>Express Your Deepest Feelings with Our AI Love Letter Generator</h2>
-      <p>Finding the right words to express your love can sometimes be difficult. Whether you want to write a heartfelt message for your partner, surprise a crush, or celebrate a special anniversary, our <strong>Free AI Love Letter Generator</strong> is designed to help you articulate your deepest emotions effortlessly. This intelligent tool combines the power of artificial intelligence with beautiful web design to craft letters that truly resonate with the heart.</p>
+      <h2>Express Your Deepest Feelings: Two Unique Ways to Create</h2>
+      <p>Finding the right words to express your love can sometimes be difficult. Whether you want to write a heartfelt message for your partner, surprise a crush, or celebrate a special anniversary, AR Love Letters offers you two distinct, powerful systems to craft the perfect romantic artifact.</p>
       
-      <h3>How the Romantic Letter Maker Works</h3>
-      <p>Using our platform is simple and intuitive. First, you choose a visual theme that perfectly captures your relationship's vibe—be it the traditional elegance of the Classic theme, the peacefulness of Cloud 9, or the bold energy of our CYBER Neon design. Once you select your design, simply log in and input the details about your special someone. Our AI engine then weaves those details into a deeply personal and touching narrative. Finally, the system generates a unique, shareable link that you can instantly send to your loved one via WhatsApp, Instagram, or email.</p>
+      <h3>1. The Standard Letter Creator (Unlimited & Free)</h3>
+      <p>Want to write your own personal message? Our standard letter generator allows both Guests and Logged-in users to choose from 5 handcrafted visual themes—like the traditional elegance of the <em>Classic</em> theme, the peacefulness of <em>Cloud 9</em>, or the bold energy of our <em>CYBER Neon</em> design. Simply enter your names and your custom message, and the system generates a unique, shareable link instantly.</p>
       
-      <h3>Why Use an AI Love Letter Creator?</h3>
-      <p>We believe that technology should enhance human connection. Writing a letter from scratch takes time and sometimes leads to writer's block. Our generator acts as your personal romantic assistant, ensuring your message is poetic, grammatically perfect, and emotionally impactful. More importantly, we prioritize your privacy. Unlike other platforms, our system is highly secure. Your emotional expressions are yours alone.</p>
+      <h3>2. AI Magic Letters (Exclusive for Registered Users)</h3>
+      <p>Suffering from writer's block? Let our advanced Artificial Intelligence write the letter for you! This premium feature is entirely separate from the standard designs. It allows you to input specific details like the relationship type, the occasion, the emotional tone, and even a custom memory (like your first date). The AI will:</p>
+      <ul>
+        <li>Write a deeply emotional and grammatically perfect narrative.</li>
+        <li>Support multiple global and regional languages.</li>
+        <li>Automatically generate a unique, dynamic color palette and typography perfectly suited to the vibe of the generated text.</li>
+      </ul>
       
-      <h3>Who Can Use This Tool?</h3>
-      <p>Our letter maker is for everyone. It is perfect for long-distance couples wanting to bridge the gap, husbands and wives looking to rekindle the romance on anniversaries, or individuals wanting to make Valentine's Day unforgettable. Because it is a completely free online tool, expressing your love has never been more accessible or secure.</p>
+      <h3>Data Privacy & Security differences</h3>
+      <p>We respect your privacy. If you use the platform as a <strong>Guest User</strong>, your private text is encrypted directly into the URL you share (Zero-Storage Architecture)—we do not save your words in our database. However, if you choose to <strong>Login</strong>, your letters are securely saved to your private Dashboard where you can manage them, delete them permanently at any time, and your receivers get an exclusive "Save as Image" feature.</p>
     </div>
   </section>
 
@@ -432,24 +454,24 @@
     <h2 class="section-title">How It Works</h2>
     <div class="steps-grid">
       <div class="step-card">
-        <div class="step-icon"><i class="fa-solid fa-palette"></i></div>
-        <h3>1. Select Design</h3>
-        <p>Choose a theme that matches your feelings (Classic, Midnight, etc.).</p>
+        <div class="step-icon"><i class="fa-solid fa-code-branch"></i></div>
+        <h3>1. Choose Your Path</h3>
+        <p>Write your own message using our 5 standard themes, or let the AI write it for you.</p>
       </div>
       <div class="step-card">
         <div class="step-icon"><i class="fa-solid fa-pen-fancy"></i></div>
-        <h3>2. Customize</h3>
-        <p>Login and enter your special someone's details.</p>
+        <h3>2. Personalize</h3>
+        <p>Add your names, language preferences, and special memories.</p>
       </div>
       <div class="step-card">
         <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
-        <h3>3. Share Love</h3>
-        <p>Generate a beautiful link instantly and share it with your loved one.</p>
+        <h3>3. Generate & Share</h3>
+        <p>Get a beautiful unique link instantly and share it with your loved one.</p>
       </div>
       <div class="step-card">
-        <div class="step-icon"><i class="fa-solid fa-download"></i></div>
-        <h3>4. Download Letter</h3>
-        <p>Save your beautiful letter as an image to keep it forever.</p>
+        <div class="step-icon"><i class="fa-solid fa-table-columns"></i></div>
+        <h3>4. Manage Dashboard</h3>
+        <p>Login to save your history, easily delete old letters, and unlock image downloads.</p>
       </div>
     </div>
   </section>
@@ -509,18 +531,18 @@
     <div class="features-grid">
       <div class="feature-box">
         <i class="fa-solid fa-lock"></i>
-        <h3>Secure & Private</h3>
-        <p>Authentication via Firebase ensures top security. Letters pass via URLs and are never stored on our database.</p>
+        <h3>Secure Architecture</h3>
+        <p>Zero-Storage URL encryption for Guests, and a secure, fully deletable Cloud Dashboard for registered users.</p>
       </div>
       <div class="feature-box">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-        <h3>AI Powered</h3>
-        <p>Struggling with words? Let our system help you draft the perfect emotional message.</p>
+        <i class="fa-solid fa-language"></i>
+        <h3>Multi-Language AI</h3>
+        <p>Our advanced AI understands context and can write deeply emotional letters in dozens of global languages.</p>
       </div>
       <div class="feature-box">
         <i class="fa-solid fa-mobile-screen"></i>
         <h3>Fully Responsive</h3>
-        <p>Create letters on the go. Works perfectly on mobile, tablet, and desktop.</p>
+        <p>Create letters on the go. Works perfectly on mobile, tablet, and desktop without any app installation.</p>
       </div>
     </div>
   </section>
@@ -531,22 +553,37 @@
       
       <details>
         <summary>Is this AI Love Letter Generator free?</summary>
-        <p>Yes, our AI Love Letter Generator is completely free to use. You can create, personalize, and share beautiful romantic letters online without any cost.</p>
+        <p>Yes! Our Standard Letter Generator (5 designs) is completely free and unlimited for everyone. The advanced AI Magic Letter feature is also free for our registered users, subject to daily generative limits.</p>
       </details>
 
       <details>
-        <summary>Can I personalize my love letter?</summary>
-        <p>Absolutely! You can customize your message, choose from multiple beautiful themes, and generate a unique link to send to your special someone.</p>
+        <summary>What is the difference between a Guest and a Logged-in user?</summary>
+        <p><strong>Guests</strong> can create unlimited standard letters, but they cannot save them. <strong>Logged-in users</strong> get a personal Dashboard to manage their history, access to the exclusive AI Magic Generator, and their receivers get a premium 'Save as Image' button to download the letter.</p>
+      </details>
+
+      <details>
+        <summary>Why isn't the 'Save Image' button visible to the person I sent the link to?</summary>
+        <p>If you create a letter as a Guest (without logging in), the 'Save Image' option is only available to you, the creator. The receiver will not see this option. To unlock the premium 'Save Image' button for your receiver, please Login and generate the letter from your account.</p>
+      </details>
+
+      <details>
+        <summary>Why is my link so long, and why is WhatsApp/Instagram breaking it?</summary>
+        <p>When you use the free Guest mode, we don't save your data on our servers. Instead, your entire message is encrypted directly into the URL itself (data parameter). Because of this, the link becomes very long, and some apps like WhatsApp or Instagram might break it. <strong>Solution:</strong> You can shorten the link using a URL shortener, or for the best experience, simply <strong>Login!</strong> Logged-in users get beautiful, short Premium Links that never break.</p>
       </details>
 
       <details>
         <summary>Is my data secure and private?</summary>
-        <p>Yes, your privacy is our top priority. All user authentication is securely handled by <strong>Firebase</strong>. Furthermore, your generated love letters are <strong>never stored on our servers</strong>; the message data is encrypted and passed directly through the secure URL you share.</p>
+        <p>Absolutely. We use a dual-security model. If you use the app as a Guest, we use a <strong>Zero-Storage Architecture</strong>—your letter is encrypted into the URL itself and never touches our database. If you Login, your letters are securely saved to your private Dashboard so you can manage them, and you can permanently delete them from our servers at any time.</p>
+      </details>
+
+      <details>
+        <summary>How does the AI Magic Letter work?</summary>
+        <p>Instead of using standard templates, the AI Magic feature asks for relationship type, occasion, tone, and your custom memories. It then writes a beautiful narrative in your chosen language and automatically generates unique design colors perfectly suited to the vibe of your letter.</p>
       </details>
 
       <details>
         <summary>Does the receiver need an account to read the letter?</summary>
-        <p>No, the receiver does not need an account. They can simply click the unique link you share with them to read your beautifully designed letter instantly.</p>
+        <p>No, the receiver does not need an account. They can simply click the unique link you share with them via WhatsApp or Email to read your beautifully designed letter instantly.</p>
       </details>
 
     </div>
@@ -567,26 +604,29 @@
         <p>Making expression easy.</p>
       </div>
       <div class="footer-links">
-        <h4>Quick Links</h4>
+        <h4>Product</h4>
         <ul>
-          <li><a href="https://ayush-letter.netlify.app/login.html">Login</a></li>
-          <li><a href="https://ayush-letter.netlify.app/signup.html">Sign Up</a></li>
-          <li><a href="https://github.com/ayushraistudio/Love-Letter-Service">GitHub Repo</a></li>
+          <li><a href="https://ayush-letter.netlify.app/">Go to App</a></li>
+          <li><a href="https://ayush-letter.netlify.app/login.html">Login / Register</a></li>
+          <li><a href="#design-section">View Designs</a></li>
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Contact</h4>
+        <h4>Resources</h4>
         <ul>
-          <li><a href="mailto:info@ayushraistudio.com">Email Support</a></li>
-          <li><a href="https://in.linkedin.com/in/ayushraistudio">LinkedIn</a></li>
+          <li><a href="https://ayush-letter.netlify.app/privacy.html" target="_blank">Privacy Policy</a></li>
+          <li><a href="https://ayush-letter.netlify.app/terms.html" target="_blank">Terms of Service</a></li>
+          <li><a href="https://ayush-letter.netlify.app/support.html" target="_blank">Support Desk</a></li>
         </ul>
       </div>
-    </div>
-
-    <div style="text-align: center; padding-top: 20px; padding-bottom: 10px; font-size: 14px; opacity: 0.8;">
-      <a href="privacy.html" style="color: inherit; text-decoration: none; margin: 0 10px; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Privacy Policy</a> | 
-      <a href="terms.html" style="color: inherit; text-decoration: none; margin: 0 10px; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Terms of Service</a> | 
-      <a href="mailto:arloveletter.support@gmail.com" style="color: inherit; text-decoration: none; margin: 0 10px; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Support Team</a>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://github.com/ayushraistudio/Love-Letter-Service">GitHub Repo</a></li>
+          <li><a href="https://in.linkedin.com/in/ayushraistudio">LinkedIn</a></li>
+          <li><a href="#" onclick="window.location.href='mailto:' + 'arloveletter.support' + '@' + 'gmail.com'; return false;">Email Support</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="copyright">
@@ -611,8 +651,10 @@
     }
 
     function selectDesign(styleName) {
+        // Saving the design preference
         localStorage.setItem("selectedDesign", styleName);
-        window.location.href = "https://ayush-letter.netlify.app/login.html";
+        // Redirecting directly to the main app interface
+        window.location.href = "https://ayush-letter.netlify.app/";
     }
   </script>
 </body>

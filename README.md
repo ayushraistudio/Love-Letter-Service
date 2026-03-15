@@ -1,43 +1,38 @@
-# 💌 AR Love Letters – Personalized Letter Generator
+# 💌 AR Love Letters – Advanced Personalized Letter Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://143-letter.netlify.app)
+[![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://love-letter-service.netlify.app)
+[![Firebase](https://img.shields.io/badge/Firebase-Integrated-FFCA28?style=flat-square&logo=firebase&logoColor=black)](#)
 
-A secure, interactive, and beautifully designed web application that allows authenticated users to generate personalized, heartfelt love letters instantly. Now featuring 5 handcrafted design themes and an AI Canvas generator that can automatically create a beautifully written love letter based on your input.
+A secure, interactive, and beautifully designed web application that allows users to generate personalized, heartfelt love letters instantly. Powered by a dual-architecture system, it features 5 handcrafted standard themes and an advanced **AI Magic Canvas** that leverages LLM technology to automatically write and style emotional letters based on minimal user input.
 
-🌐 Live Demo: https://love-letter-service.netlify.app
+🌐 **Live Demo:** [https://love-letter-service.netlify.app](https://love-letter-service.netlify.app)
+
+---
+
+## ✨ Key Features
+
+### 🎨 The Standard Creator (Stateless & Unlimited)
+* **5 Unique Visual Styles:** Choose from Classic Love (Pink), Midnight Romance (Dark/Gold), Blue Sky (Calm), Vintage (Old Paper), and Neon Cyberpunk (Glowing).
+* **Dynamic Styling:** The entire application (Background, Fonts, Borders) adapts instantly based on the selected theme.
+* **Custom Message Support:** Users can write and personalize their own love letter messages effortlessly.
+
+### 🤖 AI Magic Letters (For Registered Users)
+* **LLM-Powered Creation:** Users provide contextual inputs (relationship type, occasion, tone, custom memories), and the AI weaves a deeply personal and grammatically perfect narrative.
+* **Multi-Language Support:** Generate letters in dozens of global and regional languages.
+* **Auto-Generated Aesthetics:** The system automatically crafts a dynamic color palette and typography that perfectly matches the emotional vibe of the generated text.
+
+### 🔐 Dual-Mode Security & Data Architecture
+* **Zero-Storage Guest Mode:** Letters created without logging in are compressed and encrypted directly into the URL payload (`?data=`). **No private text is stored on our servers**, ensuring ultimate privacy.
+* **Stateful Cloud Dashboard:** Authenticated users enjoy a secure personal dashboard where their letters (`?id=`) are safely hosted via Google Cloud Firestore, allowing them to manage, revisit, or permanently delete their history.
+* **Centralized Support & Security:** Integrated rate-limiting (Anti-Spam) to protect the ecosystem, along with a dedicated Support & Abuse ticketing system for registered users to securely manage their requests.
+
+### 🚀 Smart Sharing & Downloading
+* **Theme-Aware Sharing:** When you share a link, the recipient experiences the exact design you crafted (fonts, colors, and theme).
+* **Premium Image Export:** Logged-in users and their recipients can download the letter as a high-quality `.png` image that perfectly captures the specific background and style.
 
 ---
 
-✨ Key Features
-
-🎨 Multi-Theme Design System
-
-* 5 Unique Styles: Choose from Classic Love (Pink), Midnight Romance (Dark/Gold), Blue Sky (Calm), Vintage (Old Paper), and Neon Cyberpunk (Glowing).
-* Dynamic Styling: The entire application (Background, Fonts, Borders) adapts instantly based on the selected theme.
-* Custom Message Support: Users can write and personalize their own love letter message.
-
-🤖 AI Canvas Generator
-
-* Automatic Love Letter Creation: Users provide a few simple inputs, and the AI generates a complete romantic letter automatically.
-* AI-Styled Canvas: The generated message is displayed in a beautifully styled canvas design.
-* Creative Writing Assistance: Helps users create more expressive and emotional messages without writing everything manually.
-
-🔐 Advanced Authentication & Security
-
-* Secure Login/Signup: Powered by Firebase Authentication.
-* Password Recovery: Integrated "Forgot Password" functionality for account recovery.
-* Strict Creator Mode: Direct URL access is blocked for creating letters without login.
-* Public Viewer Mode: Shared links can be viewed by anyone without logging in.
-
-🚀 Smart Sharing & Downloading
-
-* Theme-Aware Sharing: When you share a link, the recipient sees the exact design you chose (fonts, colors, and theme).
-* High-Quality Download: Download your letter as an image (".png") that captures the specific background and style of your chosen theme.
-* Privacy-Focused: No personal letter data is permanently stored on a database; data is encoded securely within the shareable link.
-
----
-  
 ## 📸 Screenshots
 
 A glimpse into the application interface and workflow.
@@ -45,59 +40,42 @@ A glimpse into the application interface and workflow.
 | **Modern Landing Page** | **User Dashboard & Input** |
 | :---: | :---: |
 | <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/_dashboard.png" alt="Dashboard" width="400"/> |
-| *Elegant homepage with design selection.* | *Secure area to input details.* |
+| *Elegant homepage with design selection.* | *Secure area to manage generated letters.* |
 
 | **Recipient Details Form** | **Final Generated Letter** |
 | :---: | :---: |
 | <img src="./assets/image.png" alt="Recipient Form" width="400"/> | <img src="./assets/Letter.jpg" alt="Generated Letter" width="400"/> |
-| *Easy-to-use input fields.* | *final output.* |
+| *Easy-to-use input fields with AI options.* | *Beautiful, shareable final output.* |
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML5, CSS3 (Advanced CSS Variables for Theming), Vanilla JavaScript.
-* **Authentication:** Google Firebase Auth (Login, Signup, Reset Password).
+* **Frontend:** HTML5, CSS3 (Advanced CSS Variables), Vanilla JavaScript (ES6 Modules).
+* **Backend / Serverless:** Netlify Functions (Node.js).
+* **Database & Auth:** Google Firebase (Authentication, Cloud Firestore).
+* **AI Integration:** Groq API (Llama 3 Models).
 * **Libraries:** * `html2canvas` (For generating downloadable images).
-    * `FontAwesome` (For icons).
-* **Fonts:** Google Fonts (Great Vibes, Playfair Display, Poppins, Cinzel, Orbitron).
+  * `lz-string` (For secure URL payload compression).
+  * `FontAwesome` (For UI icons).
 * **Hosting:** Netlify.
-
----
 
 ## 🚀 Getting Started Locally
 
-To run this project locally, you need to set up your own Firebase project.
+This repository contains the **Public Landing Page and Legal Documentation** of the AR Love Letters ecosystem. 
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/ayushraistudio/Love-Letter-Service.git](https://github.com/ayushraistudio/Love-Letter-Service.git)
-    cd Love-Letter-Service
-    ```
+*Note: The core AI engine, Firebase authentication, serverless functions, and user dashboards are maintained in a separate, closed-source private repository to ensure maximum security and protect proprietary logic.*
 
-2.  **Setup Firebase**
-    * Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
-    * Navigate to **Build > Authentication** and enable the **Email/Password** sign-in method.
-    * Go to Project Settings and copy your Firebase Web App configuration objects.
+To run this landing page locally:
 
-3.  **Configure the App**
-    * Locate your Firebase initialization file (e.g., inside `login.js` and `signup.html`).
-    * Replace the placeholder config with your actual Firebase project keys.
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/ayushraistudio/Love-Letter-Service.git](https://github.com/ayushraistudio/Love-Letter-Service.git)
+   cd Love-Letter-Service
 
-    ```javascript
-    // Example config structure
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
-    };
-    ```
-
-4.  **Run the project**
-    * Simply open `index.html` in your browser (or use a live server extension).
+2. **Run Locally**
+   * No complex setup, `.env` files, or build tools are required for this frontend repo.
+   * Simply open `index.html` in any modern web browser or use a VS Code extension like **Live Server**.
 
 ---
 
@@ -115,5 +93,4 @@ Distributed under the MIT License. See the `LICENSE` file for more information.
 * GitHub: [@ayushraistudio](https://github.com/ayushraistudio)
 
 ---
-Made with ❤️ and code.
-
+*Made with ❤️ and code.*

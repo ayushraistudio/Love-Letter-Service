@@ -6,7 +6,7 @@
 
 A secure, interactive, and beautifully designed web application that allows users to generate personalized, heartfelt love letters instantly. Powered by a dual-architecture system, it features 5 handcrafted standard themes and an advanced **AI Magic Canvas** that leverages LLM technology to automatically write and style emotional letters based on minimal user input.
 
-🌐 **Live Demo:** [https://love-letter-service.netlify.app](https://love-letter-service.netlify.app)
+🌐 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://love-letter-service.netlify.app)
 
 ---
 

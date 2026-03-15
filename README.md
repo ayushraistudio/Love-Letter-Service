@@ -54,7 +54,7 @@ A glimpse into the application interface and workflow.
 * **Frontend:** HTML5, CSS3 (Advanced CSS Variables), Vanilla JavaScript (ES6 Modules).
 * **Backend / Serverless:** Netlify Functions (Node.js).
 * **Database & Auth:** Google Firebase (Authentication, Cloud Firestore).
-* **AI Integration:** Groq API (Llama 3 Models).
+* **AI Integration:**  Proprietary LLM-based generation system
 * **Libraries:** * `html2canvas` (For generating downloadable images).
   * `lz-string` (For secure URL payload compression).
   * `FontAwesome` (For UI icons).

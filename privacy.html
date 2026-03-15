@@ -70,12 +70,11 @@
     <ul>
         <li><strong>Hosting and Edge CDN:</strong> Netlify Inc. (For global website delivery and serverless function routing).</li>
         <li><strong>Database and Authentication:</strong> Google Firebase (For secure login management, credential storage, and stateful letter hosting).</li>
-        <li><strong>Artificial Intelligence Processing:</strong> Groq Inc. / Llama Models (For generating AI letter text based on your prompts. AI prompts are strictly execution-oriented and are NOT used to train their models).</li>
+        <li><strong>Artificial Intelligence Processing:</strong> Third-party Large Language Model (LLM) infrastructure providers are used to generate AI-assisted letter content based on user prompts. These providers process requests strictly for execution purposes and do not retain prompts for model training under our configuration.</li>
     </ul>
-
+    <p><strong>Third-Party Infrastructure Disclaimer:</strong> While we carefully select reputable infrastructure vendors, AR Love Letters does not control the internal security practices of these third-party providers. External services operate under their own privacy and security policies.</p>
     <h2>4. Telemetry and Geographic Analytics</h2>
-    <p>To ensure minimal latency and mitigate automated abuse (DDoS), our backend middleware continuously aggregates macro-level diagnostic telemetry. This includes anonymous IP monitoring and <strong>Country-level geographic origins.</strong> This data is strictly utilized for algorithmic rate-limiting and CDN optimization. It is never mapped to your personal identity or private communications.</p>
-
+    <p>To ensure minimal latency and mitigate automated abuse (DDoS), our backend middleware continuously aggregates macro-level diagnostic telemetry. This includes aggregated country-level geographic analytics used to understand general usage patterns, mitigate automated abuse, and assist in selecting appropriate language preferences for AI-generated letters. This data is strictly utilized for algorithmic rate-limiting and CDN optimization. It is never mapped to your personal identity or private communications.</p>
     <h2>5. Local Storage and Tracking</h2>
     <p>We strictly utilize HTML5 Web Storage (`localStorage` and `sessionStorage`) to temporarily cache your interface preferences (e.g., Dark Mode) and unsubmitted form data. We do not deploy third-party advertising trackers, marketing cookies, or cross-site surveillance pixels.</p>
 

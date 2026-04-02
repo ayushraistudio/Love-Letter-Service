@@ -22,11 +22,11 @@ A secure, interactive, and beautifully designed web application that allows user
 * **Multi-Language Support:** Generate letters in dozens of global and regional languages.
 * **Auto-Generated Aesthetics:** The system automatically crafts a dynamic color palette and typography that perfectly matches the emotional vibe of the generated text.
 
-  ### 🖌️ Custom Canvas (The Ultimate Personalized Experience)
+### 🖌️ Custom Canvas (The Ultimate Personalized Experience)
 * **Design It Your Way:** Exclusively for registered users, take full control over your romantic masterpiece. Customize header branding, colors, typography, text alignment, and create custom background gradients.
 * **Immersive Experience:** Add beautiful background music (Romantic Piano, Lofi Chill, etc.) and select dynamic reveal animations (Fade, Slide-up, Typewriter) to make your letter truly magical.
 * **Advanced Export:** Enjoy high-definition image downloads that perfectly capture your custom design, shadows, and bold text.
-* 
+  
 
 ### 🔐 Dual-Mode Security & Data Architecture
 * **Zero-Storage Guest Mode:** Letters created without logging in are compressed and encrypted directly into the URL payload (`?data=`). **No private text is stored on our servers**, ensuring ultimate privacy.
@@ -43,10 +43,10 @@ A secure, interactive, and beautifully designed web application that allows user
 
 A glimpse into the application interface and workflow.
 
-| **Modern Landing Page** | **User Dashboard & Input** |
+| **Modern Landing Page** | **User Input** |
 | :---: | :---: |
 | <img src="./assets/landing.jpg" alt="Landing Page" width="400"/> | <img src="./assets/_dashboard.png" alt="Dashboard" width="400"/> |
-| *Elegant homepage with design selection.* | *Secure area to manage generated letters.* |
+| *Elegant homepage * | *Design selection.* |
 
 | **Recipient Details Form** | **Final Generated Letter** |
 | :---: | :---: |

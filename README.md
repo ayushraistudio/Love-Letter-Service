@@ -55,7 +55,7 @@ A glimpse into the application interface and workflow.
 
 | **Custom Canvas (Advanced Editor)** |
 | :---: |
-| <img src="./assets/custom-canvas.jpg" alt="Custom Canvas" width="850"/> |
+| <img src="./assets/custom-preview.jpg" alt="Custom Canvas" width="850"/> |
 | *Complete control over typography, colors, background, music, and reveal animations.* |
 
 ---

@@ -22,6 +22,12 @@ A secure, interactive, and beautifully designed web application that allows user
 * **Multi-Language Support:** Generate letters in dozens of global and regional languages.
 * **Auto-Generated Aesthetics:** The system automatically crafts a dynamic color palette and typography that perfectly matches the emotional vibe of the generated text.
 
+  ### 🖌️ Custom Canvas (The Ultimate Personalized Experience)
+* **Design It Your Way:** Exclusively for registered users, take full control over your romantic masterpiece. Customize header branding, colors, typography, text alignment, and create custom background gradients.
+* **Immersive Experience:** Add beautiful background music (Romantic Piano, Lofi Chill, etc.) and select dynamic reveal animations (Fade, Slide-up, Typewriter) to make your letter truly magical.
+* **Advanced Export:** Enjoy high-definition image downloads that perfectly capture your custom design, shadows, and bold text.
+* 
+
 ### 🔐 Dual-Mode Security & Data Architecture
 * **Zero-Storage Guest Mode:** Letters created without logging in are compressed and encrypted directly into the URL payload (`?data=`). **No private text is stored on our servers**, ensuring ultimate privacy.
 * **Stateful Cloud Dashboard:** Authenticated users enjoy a secure personal dashboard where their letters (`?id=`) are safely hosted via Google Cloud Firestore, allowing them to manage, revisit, or permanently delete their history.
@@ -46,6 +52,11 @@ A glimpse into the application interface and workflow.
 | :---: | :---: |
 | <img src="./assets/image.png" alt="Recipient Form" width="400"/> | <img src="./assets/Letter.jpg" alt="Generated Letter" width="400"/> |
 | *Easy-to-use input fields with AI options.* | *Beautiful, shareable final output.* |
+
+| **Custom Canvas (Advanced Editor)** |
+| :---: |
+| <img src="./assets/custom-canvas.jpg" alt="Custom Canvas" width="850"/> |
+| *Complete control over typography, colors, background, music, and reveal animations.* |
 
 ---
 

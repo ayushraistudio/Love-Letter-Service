@@ -8,4 +8,18 @@
     <priority>1.0</priority>
   </url>
 
+  <url>
+    <loc>https://love-letter-service.netlify.app/privacy.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://love-letter-service.netlify.app/terms.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

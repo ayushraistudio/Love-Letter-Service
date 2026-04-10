@@ -1,4 +1,4 @@
-# 💌 AR Love Letters – Advanced Personalized Letter Generator (free)
+# 💌 AR Love Letters – Free Advanced Personalized Letter Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://love-letter-service.netlify.app)

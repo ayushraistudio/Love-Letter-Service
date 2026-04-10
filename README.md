@@ -1,10 +1,10 @@
-# 💌 AR Love Letters – Free Advanced Personalized Letter Generator
+# 💌 AR Love Letters – Advanced Personalized Letter Generator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=flat-square&logo=netlify&logoColor=white)](https://love-letter-service.netlify.app)
 [![Firebase](https://img.shields.io/badge/Firebase-Integrated-FFCA28?style=flat-square&logo=firebase&logoColor=black)](#)
 
-A secure, interactive, and beautifully designed web application that allows users to generate personalized, heartfelt love letters instantly. Powered by a dual-architecture system, it features 5 handcrafted standard themes and an advanced **AI Magic Canvas** that leverages LLM technology to automatically write and style emotional letters based on minimal user input.
+A secure, interactive, and beautifully designed web application that allows users to generate personalized, heartfelt love letters instantly — **completely free to use**. Powered by a dual-architecture system, it features 5 handcrafted standard themes and an advanced **AI Magic Canvas** that leverages LLM technology to automatically write and style emotional letters based on minimal user input.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://love-letter-service.netlify.app)
 

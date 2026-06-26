@@ -26,7 +26,16 @@ A secure, interactive, and beautifully designed web application that allows user
 * **Design It Your Way:** Exclusively for registered users, take full control over your romantic masterpiece. Customize header branding, colors, typography, text alignment, and create custom background gradients.
 * **Immersive Experience:** Add beautiful background music (Romantic Piano, Lofi Chill, etc.) and select dynamic reveal animations (Fade, Slide-up, Typewriter) to make your letter truly magical.
 * **Advanced Export:** Enjoy high-definition image downloads that perfectly capture your custom design, shadows, and bold text.
-  
+
+ ### 🎬 Animated Scrapbook (Cinematic Story Experience)
+
+* **Turn Memories into a Story:** Create a beautiful animated scrapbook by uploading up to **4 personal photos** and writing a heartfelt message.
+* **Cinematic Photo Sequence:** Photos are displayed one by one with smooth transitions, creating an emotional storytelling experience.
+* **Elegant Glassmorphism Letter Box:** After the photo sequence finishes, a modern transparent glass-style message box gracefully appears with your personalized love letter.
+* **Romantic Background Music:** Enhance the experience with optional background music for a cinematic feel.
+* **Cloud-Saved Projects:** Authenticated users can securely save, revisit, and manage their animated scrapbooks from their personal dashboard.
+* **Shareable Experience:** Every scrapbook generates a unique shareable link, allowing recipients to enjoy the complete animated presentation exactly as designed.
+
 
 ### 🔐 Dual-Mode Security & Data Architecture
 * **Zero-Storage Guest Mode:** Letters created without logging in are compressed and encrypted directly into the URL payload (`?data=`). **No private text is stored on our servers**, ensuring ultimate privacy.

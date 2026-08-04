@@ -122,12 +122,21 @@
       color: var(--color-text);
     }
 
+    /* ✨ PREMIUM GLASSMORPHISM HEADER ✨ */
     .ar-header {
       display: flex; justify-content: space-between; align-items: center;
       padding: 15px 5%;
-      background: var(--color-card);
+      background: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+      backdrop-filter: blur(12px); /* Glassmorphism effect */
+      -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 2px 15px rgba(0,0,0,0.05);
       position: sticky; top: 0; z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    [data-theme="dark"] .ar-header {
+      background: rgba(30, 30, 30, 0.85); /* Dark mode semi-transparent */
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .ar-logo {
@@ -393,12 +402,40 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* ✨ PREMIUM MOBILE FIXES ✨ */
     @media (max-width: 768px) {
-      .ar-hero h1 { font-size: 2.5rem; }
+      .ar-hero h1 { font-size: 2.2rem; }
       .cta-group { flex-direction: column; width: 100%; }
       .ar-btn-primary, .ar-btn-secondary { width: 100%; }
-      .ar-header { flex-direction: column; gap: 15px; }
-      nav { flex-wrap: wrap; justify-content: center; }
+      
+      /* Header Fixes for Mobile */
+      .ar-header { 
+        flex-direction: row; /* Ensure it stays in one line */
+        padding: 12px 15px; /* Compact padding */
+        gap: 10px;
+      }
+      .ar-logo {
+        font-size: 18px; /* Smaller Logo */
+        gap: 5px;
+      }
+      .ar-logo i {
+        font-size: 16px;
+      }
+      nav { 
+        gap: 12px; 
+        flex-wrap: nowrap; /* Prevent wrapping to new line */
+      }
+      /* Hide text links to save space and keep it clean */
+      .ar-nav-link:not(.btn-login) {
+        display: none;
+      }
+      .btn-login {
+        padding: 8px 15px;
+        font-size: 13px; /* Slightly smaller button font */
+      }
+      .ar-theme-toggle {
+        font-size: 18px;
+      }
     }
 
     /* --- THE ANIMATED SCRAPBOOK CSS --- */
@@ -421,7 +458,7 @@
         <i class="fa-solid fa-moon"></i>
       </button>
       
-      <a href="https://ayush-letter.netlify.app/" class="ar-nav-link btn-login">Go to App <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+      <a href="https://ayush-letter.netlify.app/" class="ar-nav-link btn-login">✨ Create Letter <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
     </nav>
   </header>
   

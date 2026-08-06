@@ -30,6 +30,14 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- ✨ THE "COOKIE NUKE" FIX FOR FRESH SESSIONS ✨ -->
+  <script>
+    if (!sessionStorage.getItem('ar_lang_pref') || sessionStorage.getItem('ar_lang_pref') === 'en') {
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + location.hostname + ";";
+    }
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -405,7 +413,7 @@
     .footer-links a { text-decoration: none; color: var(--color-text); opacity: 0.8; transition: opacity 0.3s; }
     .footer-links a:hover { opacity: 1; color: var(--color-primary); }
     
-    .copyright { text-align: center; opacity: 0.6; font-size: 14px; }
+    .copyright { text-align: center; opacity: 0.6; font-size: 14px; margin-top: 15px;}
 
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -420,12 +428,12 @@
       
       /* Header Fixes for Mobile */
       .ar-header { 
-        flex-direction: row; /* Ensure it stays in one line */
-        padding: 12px 15px; /* Compact padding */
+        flex-direction: row; 
+        padding: 12px 15px; 
         gap: 10px;
       }
       .ar-logo {
-        font-size: 18px; /* Smaller Logo */
+        font-size: 18px; 
         gap: 5px;
       }
       .ar-logo i {
@@ -433,18 +441,15 @@
       }
       nav { 
         gap: 12px; 
-        flex-wrap: nowrap; /* Prevent wrapping to new line */
+        flex-wrap: nowrap; 
       }
-      /* Hide text links to save space and keep it clean */
-      /* Hide text links to save space and keep it clean */
-.ar-nav-link:not(.btn-home) {
-    display: none;
-}
-
-.btn-home {
-    padding: 8px 15px;
-    font-size: 13px;
-}
+      .ar-nav-link:not(.btn-home) {
+        display: none;
+      }
+      .btn-home {
+        padding: 8px 15px;
+        font-size: 13px;
+      }
       .ar-theme-toggle {
         font-size: 18px;
       }
@@ -454,14 +459,73 @@
     @keyframes floatPhoto1 { 0%, 100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(-8px) rotate(-10deg); } }
     @keyframes floatPhoto2 { 0%, 100% { transform: translateY(0) rotate(10deg); } 50% { transform: translateY(-5px) rotate(15deg); } }
     @keyframes cinematicGlow { 0% { opacity: 0.3; transform: scale(1); } 100% { opacity: 0.8; transform: scale(1.2); } }
+
+    /* ✨ THE ULTIMATE GOOGLE NUKE (Removes Every Possible Widget/Spinner/Popup) ✨ */
+    .goog-te-banner-frame,
+    .goog-te-banner-frame.skiptranslate,
+    .skiptranslate iframe,
+    .goog-te-gadget,
+    .goog-tooltip,
+    .goog-tooltip:hover,
+    #goog-gt-tt,
+    .goog-te-spinner-pos,
+    .goog-te-spinner-animation,
+    .goog-te-gadget-icon,
+    img[src*="translate.google.com"],
+    img[src*="translate.googleapis.com"],
+    div[class*="VIpgJd-ZVi9od"], /* Targets any injected Google overlay dynamically */
+    svg.VIpgJd-ZVi9od-aZ2wEe
+    {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        z-index: -9999 !important;
+    }
+    body { top: 0px !important; position: static !important; }
+    .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+
+    /* ✨ SUPER SMOOTH & PREMIUM LANGUAGE SELECTOR ✨ */
+    .custom-lang-selector {
+        display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+        background: transparent; border: 2px solid var(--color-primary);
+        padding: 8px 15px; border-radius: 50px; cursor: pointer;
+        transition: all 0.3s ease; position: relative;
+        color: var(--color-primary);
+    }
+    .custom-lang-selector:hover { 
+        background: var(--color-primary); 
+        box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3); 
+    }
+    .custom-lang-selector i { transition: color 0.3s ease; }
+    .custom-lang-selector:hover i { color: white !important; }
+    .custom-lang-selector:hover select { color: white !important; }
+
+    .custom-lang-selector select {
+        background: transparent; border: none; font-family: 'Poppins', sans-serif;
+        font-size: 14px; font-weight: 600; color: var(--color-primary);
+        cursor: pointer; outline: none; appearance: none; -webkit-appearance: none;
+        padding-right: 5px; width: 100%; transition: color 0.3s ease;
+    }
+    .custom-lang-selector select option { 
+        background: var(--color-bg); 
+        color: var(--color-text); 
+        font-weight: 500;
+    }
+    [data-theme="dark"] .custom-lang-selector select option { 
+        background: #1e1e1e; 
+    }
   </style>
 
 </head>
 <body>
 
   <header class="ar-header">
-    <a href="#" class="ar-logo">
-      <i class="fa-solid fa-envelope-open-text"></i> AR Love Letters
+    <a href="#" class="ar-logo notranslate">
+      <i class="fa-solid fa-envelope-open-text"></i> <span>AR Love Letters</span>
     </a>
     <nav>
       <a href="#design-section" class="ar-nav-link">Designs</a>
@@ -751,8 +815,30 @@
       </div>
     </div>
 
+    <!-- ✨ CUSTOM ELEGANT LANGUAGE SWITCHER ✨ -->
+    <div style="display: flex; justify-content: center; margin-bottom: 20px;" class="notranslate">
+        <div class="custom-lang-selector">
+            <i class="fa-solid fa-language" style="color: var(--color-primary); font-size: 18px;"></i>
+            <select id="customLangSelect" onchange="changeLanguageByCustomSelect(this.value)">
+                <option value="en">English (Default)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="de">Deutsch (German)</option>
+                <option value="tl">Tagalog (Philippines)</option>
+                <option value="fr">Français (French)</option>
+                <option value="it">Italiano (Italian)</option>
+                <option value="pt">Português (Portuguese)</option>
+                <option value="ru">Русский (Russian)</option>
+                <option value="zh-CN">中文 (Chinese)</option>
+                <option value="ja">日本語 (Japanese)</option>
+                <option value="id">Bahasa Indonesia</option>
+            </select>
+            <i class="fa-solid fa-chevron-down" style="font-size: 12px; color: var(--color-primary);"></i>
+        </div>
+    </div>
+
     <div class="copyright">
-      &copy; 2026 AR Love Letters. All rights reserved. Designed by Ayush Rai.
+      &copy; <span class="notranslate">2026 AR Love Letters.</span> All rights reserved. Designed by Ayush Rai.
     </div>
   </footer>
   
@@ -773,11 +859,42 @@
     }
 
     function selectDesign(styleName) {
-        // Saving the design preference
         localStorage.setItem("selectedDesign", styleName);
-        // Redirecting directly to the main app interface
         window.location.href = "https://ayush-letter.netlify.app/";
     }
   </script>
+
+  <!-- ✨ GOOGLE TRANSLATE ENGINE (HIDDEN) ✨ -->
+  <div id="google_translate_element" style="display: none;"></div>
+  
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,hi,de,tl,fr,it,pt,ru,zh-CN,ja,id',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    
+    function changeLanguageByCustomSelect(langCode) {
+        sessionStorage.setItem('ar_lang_pref', langCode);
+        
+        const selectField = document.querySelector(".goog-te-combo");
+        if (selectField) {
+            selectField.value = langCode;
+            selectField.dispatchEvent(new Event('change'));
+        } else {
+            setTimeout(() => changeLanguageByCustomSelect(langCode), 500);
+        }
+    }
+
+    window.addEventListener('load', () => {
+        const savedLang = sessionStorage.getItem('ar_lang_pref') || 'en';
+        const customSelect = document.getElementById('customLangSelect');
+        if(customSelect) customSelect.value = savedLang;
+    });
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

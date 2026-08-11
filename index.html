@@ -305,7 +305,207 @@
     .style-blue .preview-box { background: #e0f7fa; border: 2px dotted #0288d1; color: #0288d1; font-family: 'Poppins', sans-serif; }
     .style-vintage .preview-box { background: #f4e4bc; border: 2px double #5c4033; color: #5c4033; font-family: 'Cinzel', serif; }
     .style-neon .preview-box { background: #000; border: 2px solid #0ff; color: #f0f; font-family: 'Orbitron', sans-serif; box-shadow: 0 0 8px #0ff; }
-    
+    /* ✨ PREMIUM VAULT — 9TH DESIGN ✨ */
+
+@keyframes premiumBadgeGlow {
+    0%, 100% {
+        box-shadow:
+            0 4px 10px rgba(212,175,55,.35),
+            0 0 8px rgba(212,175,55,.25);
+
+        transform: translateY(0);
+    }
+
+    50% {
+        box-shadow:
+            0 4px 15px rgba(212,175,55,.6),
+            0 0 22px rgba(212,175,55,.55);
+
+        transform: translateY(-2px);
+    }
+}
+
+
+@keyframes premiumBorderGlow {
+    0%, 100% {
+        border-color: rgba(212,175,55,.45);
+
+        box-shadow:
+            0 0 8px rgba(212,175,55,.08),
+            0 10px 30px rgba(0,0,0,.08);
+    }
+
+    50% {
+        border-color: rgba(212,175,55,.95);
+
+        box-shadow:
+            0 0 18px rgba(212,175,55,.28),
+            0 0 35px rgba(212,175,55,.12),
+            0 10px 30px rgba(0,0,0,.15);
+    }
+}
+
+
+@keyframes premiumVaultGlow {
+    0%, 100% {
+        box-shadow:
+            inset 0 0 20px rgba(212,175,55,.12);
+    }
+
+    50% {
+        box-shadow:
+            inset 0 0 30px rgba(212,175,55,.28),
+            0 0 12px rgba(212,175,55,.12);
+    }
+}
+
+
+.style-premium-teaser {
+    position: relative;
+
+    border: 2px solid rgba(212,175,55,.45) !important;
+
+    animation:
+        premiumBorderGlow 3s ease-in-out infinite;
+}
+
+
+/* UPCOMING BADGE */
+
+.style-premium-teaser .premium-upcoming-badge {
+    position: absolute;
+
+    top: -12px;
+    right: -12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f3e5ab
+        );
+
+    color: #000;
+
+    padding: 5px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    z-index: 10;
+
+    animation:
+        premiumBadgeGlow 2s ease-in-out infinite;
+}
+
+
+/* PREMIUM PREVIEW */
+
+.style-premium-teaser .premium-vault-preview {
+    background: #111 !important;
+
+    border: 2px solid #d4af37 !important;
+
+    color: #d4af37;
+
+    animation:
+        premiumVaultGlow 3s ease-in-out infinite;
+}
+
+
+.style-premium-teaser .premium-vault-preview i {
+    color: #d4af37;
+
+    font-size: 30px;
+
+    filter:
+        drop-shadow(
+            0 0 8px rgba(212,175,55,.45)
+        );
+
+    transition: transform .3s ease;
+}
+
+
+.style-premium-teaser:hover .premium-vault-preview i {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(
+            0 0 15px rgba(212,175,55,.8)
+        );
+}
+
+
+/* TITLE */
+
+.style-premium-teaser h3 {
+    color: #d4af37 !important;
+
+    font-family: 'Cinzel', serif !important;
+}
+
+
+/* SNEAK PEEK BUTTON */
+
+.style-premium-teaser .premium-sneak-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f3e5ab
+        );
+
+    color: #000;
+
+    box-shadow:
+        0 4px 15px rgba(212,175,55,.3);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.style-premium-teaser .premium-sneak-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #e6c65c,
+            #fff0b3
+        );
+
+    box-shadow:
+        0 6px 22px rgba(212,175,55,.55);
+
+    transform: scale(1.05);
+}
+
+
+/* DARK MODE */
+
+[data-theme="dark"] .style-premium-teaser {
+    background: #111 !important;
+
+    border-color: rgba(212,175,55,.45) !important;
+}
+
+
+[data-theme="dark"] .style-premium-teaser .premium-vault-preview {
+    background: #0b0c10 !important;
+
+    border-color: #d4af37 !important;
+}
+
+
+[data-theme="dark"] .style-premium-teaser p {
+    color: #d1d5db !important;
+}
     .style-ai .preview-box { background: #f3e8ff; border: 2px solid #8a2be2; color: #8a2be2; font-family: 'Poppins', sans-serif; }
     [data-theme="dark"] .style-ai .preview-box { background: #1a1a1a; border-color: #b366ff; color: #b366ff; }
 
@@ -518,6 +718,559 @@
     [data-theme="dark"] .custom-lang-selector select option { 
         background: #1e1e1e; 
     }
+
+    /* ==========================================
+   PREMIUM VAULT TEASER MODAL
+   ========================================== */
+
+.custom-modal-overlay{
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.82);
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:99999;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+}
+
+
+/* MODAL ACTIVE */
+
+.custom-modal-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* ==========================================
+   MODAL BOX
+   ========================================== */
+
+.premium-teaser-modal{
+    position:relative;
+
+    width:100%;
+    max-width:500px;
+    max-height:90vh;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    overflow-y:auto;
+
+    background:#0b0c10;
+
+    border:1px solid rgba(212,175,55,.35);
+
+    color:#fff;
+
+    text-align:center;
+
+    transform:scale(.92) translateY(15px);
+
+    opacity:0;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.9),
+        0 0 40px rgba(212,175,55,.08);
+
+    scrollbar-width:none;
+}
+
+
+.premium-teaser-modal::-webkit-scrollbar{
+    display:none;
+}
+
+
+/* MODAL OPEN ANIMATION */
+
+.custom-modal-overlay.active .premium-teaser-modal{
+    transform:scale(1) translateY(0);
+
+    opacity:1;
+}
+
+
+/* ==========================================
+   CLOSE BUTTON
+   ========================================== */
+
+.premium-modal-close{
+    position:absolute;
+
+    top:12px;
+    right:13px;
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+
+    color:#9ca3af;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+.premium-modal-close:hover{
+    color:#fff;
+
+    border-color:rgba(212,175,55,.5);
+
+    background:rgba(212,175,55,.08);
+
+    transform:rotate(90deg);
+}
+
+
+/* ==========================================
+   CROWN ICON
+   ========================================== */
+
+.premium-modal-icon{
+    width:62px;
+    height:62px;
+
+    margin:0 auto 15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.14),
+            rgba(212,175,55,.03)
+        );
+
+    border:1px solid rgba(212,175,55,.4);
+
+    color:#d4af37;
+
+    font-size:24px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.1);
+}
+
+
+.premium-modal-icon i{
+    filter:
+        drop-shadow(
+            0 0 10px rgba(212,175,55,.5)
+        );
+
+    animation:
+        premiumCrownPulse 2.5s ease-in-out infinite;
+}
+
+
+@keyframes premiumCrownPulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+
+        filter:
+            drop-shadow(
+                0 0 18px rgba(212,175,55,.8)
+            );
+    }
+
+}
+
+
+/* ==========================================
+   MODAL HEADING
+   ========================================== */
+
+.premium-teaser-modal h3{
+    margin:0 0 7px;
+
+    color:#d4af37;
+
+    font-family:'Cinzel',serif;
+
+    font-size:23px;
+
+    letter-spacing:1.2px;
+}
+
+
+.premium-modal-subtitle{
+    margin:0;
+
+    color:#9ca3af;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:12px;
+
+    letter-spacing:.3px;
+}
+
+
+/* ==========================================
+   GOLD DIVIDER
+   ========================================== */
+
+.premium-modal-divider{
+    width:60px;
+    height:1px;
+
+    margin:18px auto 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px rgba(212,175,55,.4);
+}
+
+
+/* ==========================================
+   VIDEO / GIF PREVIEW
+   ========================================== */
+
+.premium-teaser-preview{
+    width:100%;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(212,175,55,.25);
+
+    margin-bottom:20px;
+
+    background:#000;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.7),
+        0 0 20px rgba(212,175,55,.05);
+}
+
+
+.premium-teaser-preview img,
+.premium-teaser-preview video{
+    width:100%;
+
+    height:180px;
+
+    display:block;
+
+    object-fit:cover;
+
+    background:#000;
+}
+
+
+/* ==========================================
+   PLACEHOLDER PREVIEW
+   ========================================== */
+
+.premium-preview-placeholder{
+    min-height:180px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,.12),
+            transparent 65%
+        );
+}
+
+
+.premium-preview-placeholder i{
+    color:#d4af37;
+
+    font-size:34px;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(212,175,55,.5)
+        );
+}
+
+
+.premium-preview-placeholder span{
+    color:#9ca3af;
+
+    font-size:11px;
+
+    letter-spacing:.7px;
+
+    text-transform:uppercase;
+}
+
+
+/* ==========================================
+   FEATURES
+   ========================================== */
+
+.premium-modal-features{
+    text-align:left;
+
+    margin-bottom:22px;
+
+    font-size:12px;
+}
+
+
+.premium-modal-features p{
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    margin-bottom:10px;
+
+    color:#d9dde5;
+
+    line-height:1.5;
+}
+
+
+.premium-modal-features i{
+    flex-shrink:0;
+
+    color:#d4af37;
+
+    font-size:11px;
+}
+
+
+/* ==========================================
+   COMING SOON MESSAGE
+   ========================================== */
+
+.premium-coming-soon{
+    margin:0 0 20px;
+
+    padding:10px 12px;
+
+    border-radius:10px;
+
+    background:rgba(212,175,55,.05);
+
+    border:1px solid rgba(212,175,55,.15);
+
+    color:#b9bdc7;
+
+    font-size:11px;
+
+    line-height:1.5;
+}
+
+
+/* ==========================================
+   MODAL BUTTONS
+   ========================================== */
+
+.premium-modal-actions{
+    display:flex;
+
+    gap:10px;
+
+    justify-content:center;
+}
+
+
+.premium-modal-btn{
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+
+.premium-modal-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* CLOSE */
+
+.premium-modal-btn-close{
+    background:transparent;
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.18);
+}
+
+
+.premium-modal-btn-close:hover{
+    border-color:rgba(255,255,255,.35);
+
+    background:rgba(255,255,255,.05);
+}
+
+
+/* PREMIUM ACTION */
+
+.premium-modal-btn-premium{
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f3e5ab
+        );
+
+    color:#000;
+
+    box-shadow:
+        0 5px 20px rgba(212,175,55,.22);
+}
+
+
+.premium-modal-btn-premium:hover{
+    background:
+        linear-gradient(
+            135deg,
+            #e6c65c,
+            #fff0b3
+        );
+
+    box-shadow:
+        0 8px 28px rgba(212,175,55,.4);
+}
+
+
+/* ==========================================
+   DARK MODE
+   ========================================== */
+
+[data-theme="dark"] .premium-teaser-modal{
+    background:#0b0c10;
+
+    border-color:rgba(212,175,55,.35);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.95),
+        0 0 45px rgba(212,175,55,.08);
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media(max-width:600px){
+
+    .custom-modal-overlay{
+        padding:15px;
+    }
+
+    .premium-teaser-modal{
+        max-width:100%;
+
+        max-height:88vh;
+
+        padding:22px 18px;
+
+        border-radius:18px;
+    }
+        .premium-teaser-preview video{
+        height:160px;
+    }
+
+    .premium-modal-icon{
+        width:54px;
+        height:54px;
+
+        font-size:21px;
+    }
+
+    .premium-teaser-modal h3{
+        font-size:20px;
+    }
+
+    .premium-modal-actions{
+        flex-direction:column;
+    }
+
+    .premium-modal-btn{
+        width:100%;
+    }
+
+}
   </style>
 
 </head>
@@ -629,12 +1382,12 @@
         <button class="select-btn btn-ai" onclick="selectDesign('ai')">Use AI Magic</button>
       </div>
 
-      <div class="design-card" style="background: #0f172a; border: 1px solid #334155; position: relative; overflow: hidden;">
+      <div class="design-card" style="background: #0f172a; border: 1px solid #334155; position: relative;   overflow: visible;">
 
     <div style="position:absolute;width:150%;height:150%;background:radial-gradient(circle,rgba(138,43,226,.25) 0%,transparent 60%);top:-25%;left:-25%;animation:cinematicGlow 4s infinite alternate;z-index:1;"></div>
 
     <span style="position:absolute;top:-10px;right:-10px;background:linear-gradient(135deg,#00c853,#00e676);color:white;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:bold;letter-spacing:1px;box-shadow:0 4px 15px rgba(0,200,83,.5);z-index:5;text-transform:uppercase;">
-        NEW ✨
+        NEW
     </span>
 
     <div class="preview-box" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);backdrop-filter:blur(10px);position:relative;z-index:2;overflow:visible;">
@@ -707,6 +1460,36 @@
         <p>Futuristic Glowing Theme</p>
         <button class="select-btn" onclick="selectDesign('neon')">Select Design</button>
       </div>
+      <!-- ✨ 9TH CARD: PREMIUM VAULT ✨ -->
+
+<div class="design-card style-premium-teaser">
+
+    <span class="premium-upcoming-badge">
+        UPCOMING
+    </span>
+
+    <div class="preview-box premium-vault-preview">
+
+        <i class="fa-solid fa-lock"></i>
+
+    </div>
+
+    <h3>
+        Premium Vault
+    </h3>
+
+    <p>
+        End-to-End Encrypted 3D Letters
+    </p>
+
+    <button class="select-btn premium-sneak-btn"
+            onclick="showPremiumTeaser()">
+
+        Sneak Peek
+
+    </button>
+
+</div>
 
     </div>
     </section>
@@ -841,7 +1624,151 @@
       &copy; <span class="notranslate">2026 AR Love Letters.</span> All rights reserved. Designed by Ayush Rai.
     </div>
   </footer>
-  
+  <!-- ==========================================
+     PREMIUM VAULT TEASER MODAL
+     ========================================== -->
+
+<div class="custom-modal-overlay" id="premiumTeaserModal">
+
+    <div class="premium-teaser-modal">
+
+        <!-- CLOSE -->
+
+        <button class="premium-modal-close"
+                onclick="closePremiumTeaser()"
+                aria-label="Close">
+
+            &times;
+
+        </button>
+
+
+        <!-- CROWN -->
+
+        <div class="premium-modal-icon">
+
+            <i class="fa-solid fa-crown"></i>
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h3>
+            Premium Vault
+        </h3>
+
+
+        <p class="premium-modal-subtitle">
+            Something extraordinary is coming...
+        </p>
+
+
+        <!-- DIVIDER -->
+
+        <div class="premium-modal-divider"></div>
+
+
+        <!-- PREVIEW -->
+<div class="premium-teaser-preview">
+
+    <video
+         id="premiumVaultVideo"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto">
+
+        <source
+            src="assets/videos/demo.mp4"
+            type="video/mp4">
+
+    </video>
+
+</div>
+
+      
+
+
+        <!-- FEATURES -->
+
+        <div class="premium-modal-features">
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+
+                End-to-End Encrypted 3D Letters
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+
+                Cinematic 3D letter experience
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+
+                Premium animations & effects
+            </p>
+
+            <p>
+                <i class="fa-solid fa-check-circle"></i>
+
+                Exclusive romantic designs
+            </p>
+            <p>
+    <i class="fa-solid fa-check-circle"></i>
+    Personalized background music support
+</p>
+
+        </div>
+
+
+        <!-- COMING SOON -->
+
+        <div class="premium-coming-soon">
+
+            <i class="fa-solid fa-sparkles"
+               style="color:#d4af37;margin-right:5px;">
+            </i>
+
+            Premium Vault is currently under development.
+            Stay tuned for the exclusive experience.
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="premium-modal-actions">
+
+            <button class="premium-modal-btn premium-modal-btn-close"
+                    onclick="closePremiumTeaser()">
+
+                Maybe Later
+
+            </button>
+
+
+            <button class="premium-modal-btn premium-modal-btn-premium"
+                    onclick="closePremiumTeaser()">
+
+                <i class="fa-solid fa-crown"
+                   style="margin-right:5px;">
+                </i>
+
+                Got It
+
+            </button>
+
+        </div>
+
+    </div>
+ 
+
+</div>
   <script>
     function toggleTheme(){
       const html = document.documentElement;
@@ -862,6 +1789,138 @@
         localStorage.setItem("selectedDesign", styleName);
         window.location.href = "https://ayush-letter.netlify.app/";
     }
+    function showPremiumTeaser(){
+
+    const modal =
+        document.getElementById('premiumTeaserModal');
+
+    const video =
+        document.getElementById('premiumVaultVideo');
+
+    const audio =
+        document.getElementById('premiumVaultAudio');
+
+    if(!modal) return;
+
+
+    modal.style.display = 'flex';
+
+    requestAnimationFrame(() => {
+        modal.classList.add('active');
+    });
+
+    document.body.style.overflow = 'hidden';
+
+
+    /* VIDEO */
+
+    if(video){
+
+        video.currentTime = 0;
+
+        video.play().catch(() => {});
+
+    }
+
+
+    /* AUDIO */
+
+    if(audio){
+
+        audio.currentTime = 0;
+
+        audio.volume = 0.45;
+
+        audio.play().catch(() => {});
+
+    }
+
+}
+
+
+function closePremiumTeaser(){
+
+    const modal =
+        document.getElementById('premiumTeaserModal');
+
+    const video =
+        document.getElementById('premiumVaultVideo');
+
+    const audio =
+        document.getElementById('premiumVaultAudio');
+
+
+    if(video){
+
+        video.pause();
+
+        video.currentTime = 0;
+
+    }
+
+
+    if(audio){
+
+        audio.pause();
+
+        audio.currentTime = 0;
+
+    }
+
+
+    modal.classList.remove('active');
+
+    setTimeout(() => {
+
+        modal.style.display = 'none';
+
+    }, 300);
+
+    document.body.style.overflow = '';
+
+}
+
+
+/* ==========================================
+   CLICK OUTSIDE MODAL
+   ========================================== */
+
+document
+    .getElementById('premiumTeaserModal')
+    ?.addEventListener('click', function(event){
+
+        if(event.target === this){
+
+            closePremiumTeaser();
+
+        }
+
+    });
+
+
+/* ==========================================
+   ESC KEY
+   ========================================== */
+
+document.addEventListener('keydown', function(event){
+
+    if(event.key === 'Escape'){
+
+        const modal =
+            document.getElementById('premiumTeaserModal');
+
+        if(
+            modal &&
+            modal.classList.contains('active')
+        ){
+
+            closePremiumTeaser();
+
+        }
+
+    }
+
+});
   </script>
 
   <!-- ✨ GOOGLE TRANSLATE ENGINE (HIDDEN) ✨ -->

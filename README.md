@@ -17,6 +17,19 @@ A secure, interactive, and beautifully designed web application that allows user
 * **Dynamic Styling:** The entire application (Background, Fonts, Borders) adapts instantly based on the selected theme.
 * **Custom Message Support:** Users can write and personalize their own love letter messages effortlessly.
 
+### 💎 Premium Vault (Encrypted 3D Letter Experience)
+
+* **Three Premium Designs:** Choose from three exclusive visual experiences — **Gold, Diamond, and Rose**.
+* **Immersive 3D Backgrounds:** Each Premium Vault design features an animated 3D background for a cinematic and interactive letter experience.
+* **Premium Animations:** Smooth cinematic animations and visual effects create a more immersive presentation.
+* **End-to-End Encrypted Letters:** Premium Vault letter content is protected using encryption before being stored.
+* **Key-Protected Access:** A unique encryption key is required to open and decrypt the Premium Vault letter.
+* **Encrypted Storage:** Letter content is stored in encrypted form rather than as directly readable plaintext data.
+* **Personalized Background Music:** Premium Vault supports personalized background music for a more immersive experience.
+* **Secure Cloud Storage:** Premium Vault projects are securely associated with the authenticated user's account.
+* **30-Day Expiry:** Premium Vault letters are automatically configured to expire after 30 days.
+* **Private Premium Experience:** Premium Vault requires user authentication.
+
 ### 🤖 AI Magic Letters (For Registered Users)
 * **LLM-Powered Creation:** Users provide contextual inputs (relationship type, occasion, tone, custom memories), and the AI weaves a deeply personal and grammatically perfect narrative.
 * **Multi-Language Support:** Generate letters in dozens of global and regional languages.

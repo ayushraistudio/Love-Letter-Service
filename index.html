@@ -180,11 +180,21 @@
 }
     
     .ar-theme-toggle {
-      cursor: pointer; background: none; border: none;
-      font-size: 18px; color: var(--color-text);
-      transition: color 0.3s;
-    }
-    .ar-theme-toggle:hover { color: var(--color-primary); }
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.ar-theme-toggle:hover {
+  transform: translateY(-2px);
+  color: var(--primary);
+}
 
     .ar-hero {
       min-height: 85vh;

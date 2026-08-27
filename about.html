@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Learn about AR Love Letters, a creative platform for designing, generating, sharing and preserving meaningful digital letters and memories.">
+
+  <meta name="robots" content="index, follow">
+
+  <title>About Us | AR Love Letters</title>
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+  :root {
+  --bg: #fdf6f0;
+  --bg-soft: #fff0f0;
+  --card: #ffffff;
+
+  --text: #4a4a4a;
+  --text-soft: #6b6260;
+  --heading: #3d3d3d;
+
+  --primary: #ff6f61;
+  --primary-dark: #e85c50;
+  --primary-soft: rgba(255, 111, 97, 0.12);
+
+  --border: rgba(255, 111, 97, 0.18);
+  --header: rgba(253, 246, 240, 0.88);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --footer: #ffe8e5;
+  --footer-text: #4a4a4a;
+  --footer-soft: #6b6260;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --bg-soft: #1f1f1f;
+  --card: #1e1e1e;
+
+  --text: #e0e0e0;
+  --text-soft: #bdbdbd;
+  --heading: #f5f5f5;
+
+  --primary: #ff8a80;
+  --primary-dark: #ff5252;
+  --primary-soft: rgba(255, 138, 128, 0.12);
+
+  --border: rgba(255, 255, 255, 0.08);
+  --header: rgba(30, 30, 30, 0.85);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  --footer: #0a0a0a;
+  --footer-text: #e0e0e0;
+  --footer-soft: #9e9e9e;
+}
+
+[data-theme="dark"] body {
+  background: var(--bg);
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(circle at top left, var(--primary-soft), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    .ar-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      padding: 17px 6%;
+      background: var(--header);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ar-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--heading);
+      white-space: nowrap;
+    }
+
+    .ar-logo i {
+      color: var(--primary);
+      font-size: 21px;
+    }
+
+    .ar-header nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .ar-nav-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-soft);
+      transition: 0.2s ease;
+    }
+
+    .ar-nav-link:hover {
+      color: var(--primary);
+    }
+
+    .ar-theme-toggle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.25s ease;
+    }
+
+    .ar-theme-toggle:hover {
+      transform: translateY(-2px);
+      color: var(--primary);
+    }
+
+    .btn-home {
+      padding: 9px 15px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-home:hover {
+      color: white;
+      background: var(--primary-dark);
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 95px 6% 70px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      color: var(--heading);
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: 25px auto 0;
+      color: var(--text-soft);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 21px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 10px 25px rgba(214,77,112,0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL */
+
+    .section {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 45px 6%;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading .label {
+      display: block;
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1.7px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(31px, 4vw, 47px);
+      line-height: 1.2;
+      color: var(--heading);
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--text-soft);
+      font-size: 16px;
+    }
+
+    /* STORY */
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 25px;
+    }
+
+    .story-card,
+    .highlight-card,
+    .feature-card,
+    .platform-card,
+    .privacy-card,
+    .creator-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .story-card {
+      border-radius: 24px;
+      padding: 34px;
+    }
+
+    .story-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 29px;
+      color: var(--heading);
+      margin-bottom: 14px;
+    }
+
+    .story-card p {
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .highlight-column {
+      display: grid;
+      gap: 18px;
+    }
+
+    .highlight-card {
+      padding: 22px;
+      border-radius: 20px;
+    }
+
+    .highlight-card i {
+      color: var(--primary);
+      font-size: 21px;
+      margin-bottom: 11px;
+    }
+
+    .highlight-card h4 {
+      color: var(--heading);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .highlight-card p {
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* FEATURE GRID */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature-card {
+      border-radius: 22px;
+      padding: 28px;
+      transition: 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 21px;
+      margin-bottom: 17px;
+    }
+
+    .feature-card h3 {
+      color: var(--heading);
+      font-size: 21px;
+      margin-bottom: 9px;
+    }
+
+    .feature-card p {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    /* PLATFORM */
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .platform-card {
+      padding: 24px;
+      border-radius: 20px;
+    }
+
+    .platform-card i {
+      color: var(--primary);
+      font-size: 20px;
+      margin-bottom: 13px;
+    }
+
+    .platform-card h3 {
+      color: var(--heading);
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .platform-card p {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    /* PRIVACY */
+
+    .privacy-card {
+      border-radius: 24px;
+      padding: 34px;
+      background:
+        linear-gradient(135deg, var(--primary-soft), transparent 55%),
+        var(--card);
+    }
+
+    .privacy-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--heading);
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .privacy-card > p {
+      color: var(--text-soft);
+      margin-bottom: 20px;
+    }
+
+    .privacy-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .privacy-point {
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+    }
+
+    .privacy-point i {
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .privacy-point strong {
+      display: block;
+      color: var(--heading);
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .privacy-point span {
+      display: block;
+      color: var(--text-soft);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    /* MISSION */
+
+    .mission {
+      text-align: center;
+      padding: 70px 6%;
+    }
+
+    .mission-box {
+      max-width: 920px;
+      margin: auto;
+      padding: 55px 35px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at top, var(--primary-soft), transparent 55%),
+        var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .mission-box h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--heading);
+      font-size: clamp(34px, 5vw, 55px);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .mission-box h2 span {
+      color: var(--primary);
+    }
+
+    .mission-box p {
+      max-width: 680px;
+      margin: auto;
+      color: var(--text-soft);
+    }
+
+    /* CREATOR */
+
+    .creator-card {
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .creator-left {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+    }
+
+    .creator-icon {
+      width: 65px;
+      height: 65px;
+      min-width: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 27px;
+    }
+
+    .creator-card h3 {
+      color: var(--heading);
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .creator-card p {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    .creator-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 17px;
+      border-radius: 11px;
+      background: var(--primary);
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .creator-link:hover {
+      background: var(--primary-dark);
+    }
+
+    /* FOOTER */
+
+    .ar-footer {
+      margin-top: 75px;
+      background: var(--footer);
+      color: var(--footer-text);
+      padding: 60px 6% 25px;
+    }
+
+    .footer-content {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .footer-brand h4,
+    .footer-links h4 {
+      color: var(--footer-text);
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .footer-brand h4 {
+      font-size: 21px;
+    }
+
+    .footer-brand p,
+    .footer-links li {
+      color: var(--footer-soft);
+      font-size: 14px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 45px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.09);
+      text-align: center;
+      color: var(--footer-soft);
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .story-grid,
+      .feature-grid,
+      .privacy-points {
+        grid-template-columns: 1fr;
+      }
+
+      .platform-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .ar-header {
+        padding: 14px 5%;
+      }
+
+      .ar-logo {
+        font-size: 16px;
+      }
+
+      .ar-header nav {
+        gap: 8px;
+      }
+
+      .ar-nav-link:not(.btn-home) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .section {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .story-card,
+      .privacy-card,
+      .mission-box {
+        padding: 25px 20px;
+      }
+
+      .platform-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creator-card,
+      .creator-left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .creator-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="ar-header">
+
+    <a href="index.html" class="ar-logo">
+      <i class="fa-solid fa-envelope-open-text"></i>
+      <span>AR Love Letters</span>
+    </a>
+
+    <nav>
+
+      <a href="index.html#design-section" class="ar-nav-link">
+        Designs
+      </a>
+
+      <a href="index.html#how-it-works" class="ar-nav-link">
+        How it Works
+      </a>
+
+      <button
+        class="ar-theme-toggle"
+        onclick="toggleTheme()"
+        title="Toggle Dark Mode"
+        aria-label="Toggle dark mode">
+
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
+
+      </button>
+
+      <a href="https://ayush-letter.netlify.app/" class="ar-nav-link btn-home">
+        Home
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        <i class="fa-solid fa-heart"></i>
+        About AR Love Letters
+      </div>
+
+      <h1>
+        More than a message.<br>
+        <span>A place to make memories personal.</span>
+      </h1>
+
+      <p>
+        AR Love Letters is a creative digital platform designed to help people
+        express emotions through personalized letters, AI-assisted writing,
+        visual customization and shareable experiences.
+      </p>
+
+      <div class="hero-actions">
+
+        <a href="index.html#design-section" class="btn btn-primary">
+          <i class="fa-solid fa-pen-nib"></i>
+          Start Creating
+        </a>
+
+        <a href="#our-story" class="btn btn-secondary">
+          <i class="fa-solid fa-arrow-down"></i>
+          Our Story
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="section" id="our-story">
+
+      <div class="section-heading">
+
+        <span class="label">Our Story</span>
+
+        <h2>
+          Expression should feel personal,
+          not difficult.
+        </h2>
+
+        <p>
+          Finding the right words can sometimes be harder than having the
+          feelings themselves. AR Love Letters was created to make that process
+          easier while still giving every person control over how their message
+          looks, feels and is shared.
+        </p>
+
+      </div>
+
+
+      <div class="story-grid">
+
+        <article class="story-card">
+
+          <h3>A creative platform built around meaningful expression.</h3>
+
+          <p>
+            What began with the idea of making digital love letters more
+            beautiful has grown into a broader creative system. Users can write
+            their own message, ask AI for help, design a letter from scratch,
+            create a visual memory experience or preserve a more exclusive
+            private message.
+          </p>
+
+          <p>
+            The goal is simple: give people different ways to turn emotions,
+            memories and personal stories into something worth sharing.
+          </p>
+
+        </article>
+
+
+        <div class="highlight-column">
+
+          <article class="highlight-card">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            <h4>Creative freedom</h4>
+
+            <p>
+              Choose between writing manually, using AI assistance or designing
+              your own visual experience.
+            </p>
+
+          </article>
+
+
+          <article class="highlight-card">
+
+            <i class="fa-solid fa-share-nodes"></i>
+
+            <h4>Made to be shared</h4>
+
+            <p>
+              Create a personal experience and share it through a unique link
+              with the person it was made for.
+            </p>
+
+          </article>
+
+
+          <article class="highlight-card">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <h4>User control</h4>
+
+            <p>
+              Guests and registered users have different workflows, with
+              persistent storage only where the platform feature requires it.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <span class="label">What We Create</span>
+
+        <h2>
+          Different emotions deserve
+          different experiences.
+        </h2>
+
+        <p>
+          AR Love Letters provides multiple creation systems instead of forcing
+          every user into one template or writing style.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+
+          <h3>Classic Love Letters</h3>
+
+          <p>
+            Write your own message, choose a visual style and generate a
+            shareable digital letter. Guests can create temporary experiences
+            without immediately creating an account.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+
+          <h3>AI Magic</h3>
+
+          <p>
+            Give the system details such as your relationship, occasion,
+            emotional tone, language and personal memories to help transform
+            your ideas into a polished romantic letter.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+
+          <h3>Custom Canvas</h3>
+
+          <p>
+            Take direct control of the visual composition with customizable
+            text, backgrounds, alignment, animation and other design elements.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-images"></i>
+          </div>
+
+          <h3>Animated Scrapbook</h3>
+
+          <p>
+            Combine personal photographs, written memories and music into a
+            cinematic digital experience designed around storytelling and
+            emotional reveal.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-vault"></i>
+          </div>
+
+          <h3>Premium Vault Experience</h3>
+
+          <p>
+            A special private letter format designed around limited access,
+            expiration controls, visual themes and optional soundtrack support.
+          </p>
+
+        </article>
+
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <h3>Built Around Personal Stories</h3>
+
+          <p>
+            From a short heartfelt message to a complete visual memory,
+            every creation system is designed to help users make the experience
+            feel more personal.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- PLATFORM -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <span class="label">Beyond Creation</span>
+
+        <h2>
+          The letter is only one part
+          of the platform.
+        </h2>
+
+        <p>
+          Registered users also have access to tools for managing their
+          creations, reviewing activity and getting help when needed.
+        </p>
+
+      </div>
+
+
+      <div class="platform-grid">
+
+
+        <article class="platform-card">
+
+          <i class="fa-solid fa-table-columns"></i>
+
+          <h3>Personal Dashboard</h3>
+
+          <p>
+            Review saved creations, manage letters, access notifications,
+            update profile details and control your account experience.
+          </p>
+
+        </article>
+
+
+        <article class="platform-card">
+
+          <i class="fa-solid fa-compass"></i>
+
+          <h3>AR Guide</h3>
+
+          <p>
+            An interactive assistant experience designed to help users
+            understand the platform and navigate available features.
+          </p>
+
+        </article>
+
+
+        <article class="platform-card">
+
+          <i class="fa-solid fa-headset"></i>
+
+          <h3>Support Desk</h3>
+
+          <p>
+            Logged-in users can submit support requests, report problems,
+            request account deletion and track relevant assistance.
+          </p>
+
+        </article>
+
+
+        <article class="platform-card">
+
+          <i class="fa-solid fa-bell"></i>
+
+          <h3>Notifications</h3>
+
+          <p>
+            Important platform updates and relevant information can be delivered
+            directly through the user dashboard.
+          </p>
+
+        </article>
+
+
+        <article class="platform-card">
+
+          <i class="fa-solid fa-shield-halved"></i>
+
+          <h3>Account Controls</h3>
+
+          <p>
+            Users can manage saved content and request permanent account
+            deletion through the available support process.
+          </p>
+
+        </article>
+
+
+        <article class="platform-card">
+
+          <i class="fa-solid fa-code-branch"></i>
+
+          <h3>Continuously Evolving</h3>
+
+          <p>
+            AR Love Letters is an actively evolving independent platform with
+            new experiences and improvements being developed over time.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRIVACY -->
+
+    <section class="section">
+
+      <div class="privacy-card">
+
+        <h3>
+          Privacy is part of how the platform is designed.
+        </h3>
+
+        <p>
+          Different features operate differently. Temporary guest workflows are
+          designed around minimal persistent storage, while registered users can
+          deliberately save supported content for access through their personal
+          dashboard.
+        </p>
+
+
+        <div class="privacy-points">
+
+          <div class="privacy-point">
+
+            <i class="fa-solid fa-link"></i>
+
+            <strong>Guest sharing</strong>
+
+            <span>
+              Temporary guest workflows can use shareable URL-based data rather
+              than requiring every letter to be permanently stored.
+            </span>
+
+          </div>
+
+
+          <div class="privacy-point">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <strong>Saved creations</strong>
+
+            <span>
+              Persistent features for authenticated users use cloud
+              infrastructure so creations can be managed through the dashboard.
+            </span>
+
+          </div>
+
+
+          <div class="privacy-point">
+
+            <i class="fa-solid fa-trash-can"></i>
+
+            <strong>User control</strong>
+
+            <span>
+              Users can manage individual saved content and use the support
+              process for permanent account deletion requests.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MISSION -->
+
+    <section class="mission">
+
+      <div class="mission-box">
+
+        <div class="eyebrow">
+          <i class="fa-solid fa-heart"></i>
+          Our Mission
+        </div>
+
+        <h2>
+          Make expressing something meaningful
+          <span>feel easier.</span>
+        </h2>
+
+        <p>
+          We believe technology should not replace emotion. It should help
+          people communicate it better. AR Love Letters exists to give users
+          creative tools that turn thoughts, memories and feelings into
+          experiences they can truly make their own.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CREATOR -->
+
+    <section class="section">
+
+      <div class="creator-card">
+
+        <div class="creator-left">
+
+          <div class="creator-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+
+          <div>
+
+            <h3>Built independently by Ayush Rai</h3>
+
+            <p>
+              AR Love Letters is an independent digital project built around
+              creative expression, personal experiences and evolving web
+              technology.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <a
+          href="https://in.linkedin.com/in/ayushraistudio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="creator-link">
+
+          <i class="fa-brands fa-linkedin"></i>
+          Connect on LinkedIn
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="mission">
+
+      <div class="mission-box">
+
+        <h2>
+          Your story already exists.<br>
+          <span>Now give it a form.</span>
+        </h2>
+
+        <p>
+          Write it yourself, shape it visually, let AI help with the words or
+          turn memories into a complete digital experience.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="index.html#design-section" class="btn btn-primary">
+            <i class="fa-solid fa-heart"></i>
+            Create Your Letter
+          </a>
+
+          <a href="https://ayush-letter.netlify.app/" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Open the App
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="ar-footer">
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+
+        <h4>AR Love Letters</h4>
+
+        <p>
+          Making expression easy.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Product</h4>
+
+        <ul>
+
+          <li>
+            <a href="https://ayush-letter.netlify.app/">
+              Go to App
+            </a>
+          </li>
+
+          <li>
+            <a href="https://ayush-letter.netlify.app/login.html">
+              Login / Register
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#design-section">
+              View Designs
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Resources</h4>
+
+        <ul>
+
+          <li>
+            <a href="about.html">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="https://ayush-letter.netlify.app/privacy.html">
+              Privacy Policy
+            </a>
+          </li>
+
+          <li>
+            <a href="https://ayush-letter.netlify.app/terms.html">
+              Terms of Service
+            </a>
+          </li>
+
+          <li>
+            <a href="https://ayush-letter.netlify.app/support.html">
+              Support Desk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <h4>Connect</h4>
+
+        <ul>
+
+          <li>
+            <a href="https://github.com/ayushraistudio/Love-Letter-Service"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub Repository
+            </a>
+          </li>
+
+          <li>
+            <a href="https://in.linkedin.com/in/ayushraistudio"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </li>
+
+          <li>
+            <a href="mailto:arloveletter.support@gmail.com">
+              arloveletter.support@gmail.com
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      © 2026 AR Love Letters. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script>
+
+function applyTheme(theme) {
+
+  document.documentElement.setAttribute(
+    "data-theme",
+    theme
+  );
+
+  const icon = document.getElementById("themeIcon");
+
+  if (icon) {
+
+    icon.className =
+      theme === "dark"
+        ? "fa-solid fa-sun"
+        : "fa-solid fa-moon";
+
+  }
+
+}
+
+function toggleTheme() {
+
+  const nextTheme =
+    document.documentElement.getAttribute("data-theme") === "dark"
+      ? "light"
+      : "dark";
+
+  localStorage.setItem("theme", nextTheme);
+
+  applyTheme(nextTheme);
+
+}
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const savedTheme =
+        localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+
+        applyTheme("dark");
+
+      } else if (savedTheme === "light") {
+
+        applyTheme("light");
+
+      } else {
+
+        const prefersDark =
+          window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+
+        applyTheme(
+          prefersDark ? "dark" : "light"
+        );
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1283,9 +1283,15 @@
     <nav>
       <a href="#design-section" class="ar-nav-link">Designs</a>
       <a href="#how-it-works" class="ar-nav-link">How it Works</a>
-      <button class="ar-theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+      <button
+  class="ar-theme-toggle"
+  onclick="toggleTheme()"
+  title="Toggle Dark Mode"
+  aria-label="Toggle dark mode">
+
+  <i id="themeIcon" class="fa-solid fa-moon"></i>
+
+</button>
       
       <a href="https://ayush-letter.netlify.app/" class="ar-nav-link btn-home">Home</a>
     </nav>

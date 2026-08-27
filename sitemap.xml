@@ -9,6 +9,13 @@
   </url>
 
   <url>
+  <loc>https://love-letter-service.netlify.app/about</loc>
+  <lastmod>2026-08-28</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+  <url>
     <loc>https://love-letter-service.netlify.app/privacy.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>yearly</changefreq>

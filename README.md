@@ -127,4 +127,4 @@ Distributed under the MIT License. See the `LICENSE` file for more information.
 * GitHub: [@ayushraistudio](https://github.com/ayushraistudio)
 
 ---
-*Made with ❤️ and code.*
+*Crafted with ❤️ by ARLoveLetters*
